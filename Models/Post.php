@@ -1,0 +1,51 @@
+<?php
+
+class Post{
+    public $title = "";
+    public $content = "";
+    public $time = "";
+
+    public function __construct()
+    {
+      $this->db = new PDO('sqlite:./messaging.sqlite3');
+      $this->db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+    } 
+    public function __destruct()
+    {
+      $this->db = null;
+    }
+    public function getPostsRaw(){
+        $result = $this->db->query("SELECT * FROM messages ORDER BY id ASC");
+        foreach($result as $row) {
+            echo '
+            <p>'.$row['id'].'
+            '.$row['title'].'
+            '.$row['message'].'
+            '.$row['time'].'</p>
+          ';
+          }
+        $file_db = null;
+    }
+    public function getPostsStyled(){
+        $result = $this->db->query("SELECT * FROM messages ORDER BY id DESC");
+        foreach($result as $row) {
+            $time = date("Y-m-d", $row['time']);
+            echo '
+            <div class="post">
+                <span class="title">'.$row['title'].'</span>
+                <p class="content">'.$row['message'].'</p>
+                <span class="time">'.$time.'</span>
+                <span>'.$row['id'].'</span>
+            </div>
+          ';
+          }
+        $file_db = null;
+    }
+    public function insertPost($f1,$f2,$f3){
+        $sql = "INSERT INTO messages (title, message, time) VALUES (:f1, :f2, :f3)";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute(array(':f1'=>$f1,':f2'=>$f2,':f3'=>$f3));
+        $affected_rows = $stmt->rowCount();
+        $file_db = null;
+    }
+}
