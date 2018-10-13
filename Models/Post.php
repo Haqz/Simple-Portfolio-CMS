@@ -26,7 +26,7 @@ class Post{
           }
         $file_db = null;
     }
-    public function getPostsStyled(){
+    public function getPostsStyled($id){
         $result = $this->db->query("SELECT * FROM messages ORDER BY id DESC");
         foreach($result as $row) {
             $time = date("Y-m-d", $row['time']);
@@ -35,9 +35,11 @@ class Post{
                 <span class="title">'.$row['title'].'</span>
                 <p class="content">'.$row['message'].'</p>
                 <span class="time">'.$time.'</span>
-                <span>'.$row['id'].'</span>
             </div>
           ';
+          if($id == true){ 
+            echo '<span>'.$row['id'].'</span>';
+        }
           }
         $file_db = null;
     }

@@ -33,7 +33,7 @@ $foo = new Post;
     <input type="submit" name="submit">
   </form>
   <?php
-  $foo->getPostsStyled();
+  $foo->getPostsStyled(false);
   ?>
 </body>
 </html>
