@@ -30,11 +30,13 @@ class Post{
         foreach($result as $row) {
             $time = date("Y-m-d", $row['time']);
             echo '
-            <div class="post">
-                <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
-                <p class="content">'.$row['message'].'</p>
-                <span class="time">'.$time.'</span>
-            </div>
+            <a href="article?id='.$row['id'].'">
+                <div class="post">
+                    <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
+                    <p class="content">'.$row['message'].'</p>
+                    <span class="time">'.$time.'</span>
+                </div>
+            </a>
           ';
           if($id == true){ 
             echo '<span>'.$row['id'].'</span>';

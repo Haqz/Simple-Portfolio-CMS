@@ -3,9 +3,11 @@
 require_once './bbcode.php';
 require "scssphp/scss.inc.php";
 require 'Models/Post.php';
+require 'Models/User.php';
 
 $post = new Post;
 $scss = new scssc();
+$user = new User;
 
 $directory = "stylesheets";
 $scss->setImportPaths("scss/");
@@ -36,13 +38,19 @@ if($_POST['submit']){
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <div class="container">
   <form method="post">
     <input type="text" name="title" required>
     <input type="text" name="content" required>
     <input type="submit" name="submit">
   </form>
   <?php
-    $foo->getPostsStyled(false);
+    $post->getPostsStyled(false);
+    $user->Login("Admin","Admin");
+    if($_SESSION['logged'] == true){
+      echo "login";
+    }
   ?>
+  </div>
 </body>
 </html>
