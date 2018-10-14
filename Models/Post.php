@@ -24,7 +24,6 @@ class Post{
             '.$row['time'].'</p>
           ';
           }
-        $file_db = null;
     }
     public function getPostsStyled($id){
         $result = $this->db->query("SELECT * FROM messages ORDER BY id DESC LIMIT 7");
@@ -41,7 +40,45 @@ class Post{
             echo '<span>'.$row['id'].'</span>';
         }
           }
-        $file_db = null;
+    }
+    public function findOnePost($id){
+        $result = $this->db->query("SELECT * FROM messages WHERE id = $id");
+        foreach($result as $row) {
+            $time = date("Y-m-d", $row['time']);
+            echo '
+            <div class="post">
+                <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
+                <p class="content">'.$row['message'].'</p>
+                <span class="time">'.$time.'</span>
+            </div>
+          ';
+        }
+    }
+    public function findNextPost($id){
+        $result = $this->db->query("SELECT * FROM messages WHERE id = $id+1");
+        foreach($result as $row) {
+            $time = date("Y-m-d", $row['time']);
+            echo '
+            <div class="post">
+                <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
+                <p class="content">'.$row['message'].'</p>
+                <span class="time">'.$time.'</span>
+            </div>
+          ';
+        }
+    }
+    public function findPerviousPost($id){
+        $result = $this->db->query("SELECT * FROM messages WHERE id = $id-1");
+        foreach($result as $row) {
+            $time = date("Y-m-d", $row['time']);
+            echo '
+            <div class="post">
+                <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
+                <p class="content">'.$row['message'].'</p>
+                <span class="time">'.$time.'</span>
+            </div>
+          ';
+        }
     }
     public function insertPost($f1,$f2,$f3){
         $sql = "INSERT INTO messages (title, message, time) VALUES (:f1, :f2, :f3)";

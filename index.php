@@ -1,25 +1,31 @@
 <?php
-$directory = "stylesheets";
+
 require_once './bbcode.php';
 require "scssphp/scss.inc.php";
-$foo = new scssc();
-$foo->setImportPaths("scss/");
-$foo->setVariables(array(
+require 'Models/Post.php';
+
+$post = new Post;
+$scss = new scssc();
+
+$directory = "stylesheets";
+$scss->setImportPaths("scss/");
+$scss->setVariables(array(
 'color' => "#f1aaaa"
 ));
-echo "<style>".$foo->compile('@import "main.scss"')."</style>";
+echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
-require 'Models/Post.php';
-$foo = new Post;
- if($_POST['submit']){
-   $f1 = $_POST['title'];
-   $f2 = $_POST['content'];
+
+
+if($_POST['submit']){
+  $f1 = $_POST['title'];
+  $f2 = $_POST['content'];
   $date = new DateTime();
   $f3 = $date->getTimestamp();
   $f2 = bbcode::tohtml($f2);
-  $foo->insertPost($f1, $f2, $f3);
+  $post->insertPost($f1, $f2, $f3);
   header('Location: index.php', true, 301);
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,7 +42,7 @@ $foo = new Post;
     <input type="submit" name="submit">
   </form>
   <?php
-  $foo->getPostsStyled(false);
+    $foo->getPostsStyled(false);
   ?>
 </body>
 </html>
