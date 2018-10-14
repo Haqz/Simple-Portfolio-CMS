@@ -8,4 +8,14 @@
     .content{
         margin-top: 5px;
     }
+    .time{
+        text-align: right;
+    }
+    background-color: greenyellow;
+    transition: background-color 1s, height 2s, transform 1s;
+    margin-top: 5px;
+}
+.post:hover{
+    background-color: red;
+    transform:scale(1.01);
 }

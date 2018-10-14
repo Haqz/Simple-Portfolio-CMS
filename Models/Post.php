@@ -1,5 +1,5 @@
 <?php
-
+require_once './bbcode.php';
 class Post{
     public $title = "";
     public $content = "";
@@ -27,12 +27,12 @@ class Post{
         $file_db = null;
     }
     public function getPostsStyled($id){
-        $result = $this->db->query("SELECT * FROM messages ORDER BY id DESC");
+        $result = $this->db->query("SELECT * FROM messages ORDER BY id DESC LIMIT 7");
         foreach($result as $row) {
             $time = date("Y-m-d", $row['time']);
             echo '
             <div class="post">
-                <span class="title">'.$row['title'].'</span>
+                <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
                 <p class="content">'.$row['message'].'</p>
                 <span class="time">'.$time.'</span>
             </div>
