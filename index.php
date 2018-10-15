@@ -46,9 +46,17 @@ if($_POST['submit']){
   </form>
   <?php
     $post->getPostsStyled(false);
-    $user->Login("Admin","Admin");
-    if($_SESSION['logged'] == true){
-      echo "login";
+    $user->Login("ADmin", 'MamaMama1');
+    //$user->Register("ADmin","maszynista91@gmail.com", "MamaMama1");
+    if(isset($_SESSION['error_mail'])){
+      echo $_SESSION['error_mail'];
+      unset($_SESSION['error_mail']);
+    } else if(isset($_SESSION['error_nick'])){
+      echo $_SESSION['error_nick'];
+      unset($_SESSION['error_nick']);
+    }else if(isset($_SESSION['error_pass'])){
+      echo $_SESSION['error_pass'];
+      unset($_SESSION['error_pass']);
     }
   ?>
   </div>
