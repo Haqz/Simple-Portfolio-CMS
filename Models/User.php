@@ -27,9 +27,9 @@ class User{
                 $row = $result1->fetch(PDO::FETCH_ASSOC);
                 if(password_verify($pass , $row['pass'])){
                     $_SESSION['logged'] = true;
-                    echo "no kurwa ziomek";
+                    echo "Works gut";
                 }else{
-                    if(password_verify($pass , '$argon2i$v=19$m=1024,t=2,p=2$amI1MTY5bjFQdDdZOUVUSw$AZfnWKqxs2/2hxc52eelvBudSav9TJy6IGJdtmIEu4k')) echo "działa";
+                    echo"false1";
                 }
             }else{
                 echo "false\n";
@@ -54,7 +54,7 @@ class User{
 		    if ((filter_var($emailB, FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$mail))
 		    {
 			    $wszystko_OK=false;
-			    $_SESSION['e_email']="Podaj poprawny adres e-mail!";
+			    $_SESSION['e_email']="Email incorrect. Check spelling";
 		    }
 
             if(strlen($pass)<8){
