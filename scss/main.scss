@@ -4,6 +4,7 @@
 .post{
     .title{
         font-size: 24px;
+    transition: font-size 0.5s;
     }
     .content{
         margin-top: 5px;
@@ -13,17 +14,32 @@
     }
     width: 100%;
     text-decoration: none;
-    background-color: $color;
-    transition: background-color 1s, height 2s, width 1s;
-    margin-top: 5px;
+    border-top: 1px solid rgb(124, 9, 255);
+    background-color: black;
 }
 a{
         text-decoration: none;
 }
 .post:hover{
-    width: 102%;
+    .title{
+        font-size: 32px;
+    }
 }
-.container{
-    width: 60%;
-    margin: auto;
+#Posts{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+#Sidebar{
+    width: 200px;
+    flex-direction: column;
+    color: white;
+}
+body{
+    background: url('asets/curls.png');
+    height: 100%;   
+    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
+    margin: 0px;  /*removes default style*/
+    display: flex;  /*enables flex content for its children*/
+    box-sizing: border-box;
 }
