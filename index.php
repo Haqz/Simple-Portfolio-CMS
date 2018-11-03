@@ -18,15 +18,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
 
 
-if($_POST['submit']){
-  $f1 = $_POST['title'];
-  $f2 = $_POST['content'];
-  $date = new DateTime();
-  $f3 = $date->getTimestamp();
-  $f2 = bbcode::tohtml($f2);
-  $post->insertPost($f1, $f2, $f3);
-  header('Location: index.php', true, 301);
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -49,11 +41,7 @@ if($_POST['submit']){
 
   <div id="Posts" class="Posts">
     
-  <form method="post">
-    <input type="text" name="title" required>
-    <input type="text" name="content" required>
-    <input type="submit" name="submit">
-  </form>
+  
     <?php
       $post->getPostsStyled(false);
       $user->Login("ADmin", 'MamaMama1');

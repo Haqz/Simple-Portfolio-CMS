@@ -1,9 +1,12 @@
 <?php
 require "scssphp/scss.inc.php";
 require 'Models/User.php';
+require 'Models/Post.php';
+require_once './bbcode.php';
 
 $scss = new scssc();
 $user = new User;
+$post = new Post;
 
 $scss->setImportPaths("scss/");
 echo "<style>".$scss->compile('@import "admin.scss"')."</style>";
@@ -12,9 +15,43 @@ if($_POST['login']){
     header('Location: admin.php', true, 301);
     
 }
+function printSite($id){
+    switch($id){
+        case 1:
+            echo '
+            <form method="post">
+        <input type="text" name="title" required>
+        <input type="text" name="content" required>
+        <input type="submit" name="submit">
+      </form>';
+            break;
+        case 2:
+            echo 'no elo';
+            break;
+        default:
+            echo 'heji';
+            break;
+    }
+}
+    $get = $_GET['site'];
+if($get){
+    printSite($get);
+}
+
 if($_POST['unset']){
     unset($_SESSION['logged']);
 }
+$get = $_GET['site'];
+
+if($_POST['submit']){
+    $f1 = $_POST['title'];
+    $f2 = $_POST['content'];
+    $date = new DateTime();
+    $f3 = $date->getTimestamp();
+    $f2 = bbcode::tohtml($f2);
+    $post->insertPost($f1, $f2, $f3);
+    header('Location: admin.php', true, 301);
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,7 +87,7 @@ if($_POST['unset']){
         </div>
         </main>';
     }else{
-        echo 'elo';
+        echo '';
     }
 ?>
 <form method="post">
