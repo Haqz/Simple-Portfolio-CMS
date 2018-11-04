@@ -9,6 +9,7 @@ class Settings{
       $settings = $this->db->query("SELECT * FROM settings");
       $sett1 = $settings->fetch(PDO::FETCH_ASSOC);
       $this->name = $sett1['name'];
+      $this->author = $sett1['author'];
     } 
     public function __destruct()
     {
@@ -17,8 +18,11 @@ class Settings{
     public function getName(){
         return $this->name;
     }
+    public function getAuthor(){
+        return $this->author;
+    }
     public function setName($name){
-        $name1 =$this->getName();
+        $name1 = $this->getName();
         $sql = "UPDATE settings SET name='$name' WHERE name = '$name1'";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
@@ -31,6 +35,3 @@ class Settings{
         $file_db = null;
     }
 }
-$Settings = new Settings;
-echo $Settings->getName();
-$Settings->setName("Tfuj");

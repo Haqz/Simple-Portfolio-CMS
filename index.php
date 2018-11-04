@@ -16,10 +16,6 @@ $scss->setVariables(array(
 ));
 echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,16 +23,23 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 
   <div id="Sidebar" class="column">
-    <h1>elo</h1>
-    <h1>elo</h1>
-    <h1>elo</h1>
-    <h1>elo</h1>
+    <div class="aboutSmall">
+      <img src="prof.png" alt="Tu bedzie zjędzie" class="prof"/>
+      <p class="name">Haqz</p>
+      <p class="underName">The creator</p>
+    </div>
+    <ul class="list">
+      <li><a href="" class="a">About</a></li>
+      <li><a href="" class="a">Projects</a></li>
+      <li><a href="" class="a">Blog</a></li>
+    </ul>
   </div>
 
   <div id="Posts" class="Posts">
@@ -44,7 +47,6 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   
     <?php
       $post->getPostsStyled(false);
-      $user->Login("ADmin", 'MamaMama1');
       //$user->Register("ADmin","maszynista91@gmail.com", "MamaMama1");
       if(isset($_SESSION['error_mail'])){
         echo $_SESSION['error_mail'];
