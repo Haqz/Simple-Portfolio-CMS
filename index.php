@@ -28,7 +28,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 </head>
 <body>
 
-
+<main>
   <div id="Sidebar" class="column">
     <div class="aboutSmall">
       <img src="prof.png" alt="Tu bedzie zjędzie" class="prof"/>
@@ -40,8 +40,9 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
       <li><a href="" class="a">Projects</a></li>
       <li><a href="" class="a">Blog</a></li>
     </ul>
+    <p class="copyright">@Copyright 2018 by Haqz</p>
   </div>
-
+<div class="container">
   <div id="Posts" class="Posts">
     
   
@@ -59,7 +60,14 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
         unset($_SESSION['error_pass']);
       }
     ?>
-  </div>
 
+  </div>
+  <div id="Projects">
+    <div>
+      aaaaaaaaaaaasdasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </div>
+  </div>
+  </div>
+    </main>
 </body>
 </html>

@@ -1,6 +1,38 @@
 *{
     font-family: 'Gill Sans', sans-serif;
 }
+body{
+    margin:0;
+    min-height:100vh;
+    min-width:100vw
+}
+main{ 
+    margin: 0px;  /*removes default style*/
+    display: flex;  /*enables flex content for its children*/
+    background-color: #dcdde1;
+    
+}
+.container{
+    height: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    align-content: space-around;
+}
+#Posts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+#Sidebar{
+    flex-direction: column;
+    color: white;
+    background-color: #2f3640;
+}
+#Projects{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
 .post{
     .title{
         font-size: 24px;
@@ -12,37 +44,16 @@
     .time{
         text-align: right;
     }
-    width: 100%;
+    width: 300px;  /* Or whatever */
+  height:300px; /* Or whatever */
     text-decoration: none;
     border-top: 1px solid rgb(124, 9, 255);
     background-color: #7f8fa6;
-}
-a{
-        text-decoration: none;
 }
 .post:hover{
     .title{
         font-size: 32px;
     }
-}
-#Posts{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-#Sidebar{
-    width: 200px;
-    flex-direction: column;
-    color: white;
-    background-color: #2f3640;
-}
-body{
-    height: 100%;   
-    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the sidebar and main content containers)*/
-    margin: 0px;  /*removes default style*/
-    display: flex;  /*enables flex content for its children*/
-    box-sizing: border-box;
-    background-color: #dcdde1;
 }
 .prof{
     height: 100px;
@@ -51,7 +62,11 @@ body{
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px solid white;
+    transition: filter 0.2s;
+
+}
+.prof:hover{
+    filter: drop-shadow(0 0 0.35rem #7f8fa6);
 }
 .name{
     font-family: 'Spicy Rice', cursive;
@@ -71,37 +86,44 @@ body{
     padding: 0; 
     list-style: none; 
     text-align: center;
-  }
-  .list>li { 
-    position: relative; 
-    padding: 15px 0;
-  }
-  .list>li>a {
-    color: #fff;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    
-    display: inline-block;
-    padding: 15px 20px;
-    position: relative;
-  }
-  a:after {    
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  a:hover:after { 
-    width: 100%; 
-    left: 0; 
-  }
+    flex-grow: 3;
+    li { 
+        position: relative; 
+        padding: 15px 0;
+        .a {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.15em;
+            
+            display: inline-block;
+            padding: 15px 20px;
+            position: relative;
+          }
+      }
+      .a:after {    
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: #fff;
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      .a:hover:after { 
+        width: 100%; 
+        left: 0; 
+      }
+}
+.copyright{
+    position:fixed;
+    bottom:0;
+    float: right;
+    font-size: 12px;
+}
   @media screen and (max-height: 300px) {
       ul {
           margin-top: 40px;
