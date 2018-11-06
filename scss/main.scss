@@ -6,15 +6,17 @@ body{
     min-height:100vh;
     min-width:100vw
 }
-main{ 
-    margin: 0px;  /*removes default style*/
+main{  
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
     display: flex;  /*enables flex content for its children*/
     background-color: #dcdde1;
     
 }
 .container{
+    margin-top: 0.2em;
     height: 100%;
-    align-items: stretch;
     flex-direction: column;
     align-content: space-around;
 }
@@ -35,24 +37,30 @@ main{
 }
 .post{
     .title{
-        font-size: 24px;
-    transition: font-size 0.5s;
+        margin:0;
+        padding: 5px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 32px;
+        transition: font-size 0.5s;
     }
     .content{
+        padding: 5px;
         margin-top: 5px;
     }
     .time{
+        padding: 5px;
         text-align: right;
     }
     width: 300px;  /* Or whatever */
-  height:300px; /* Or whatever */
+    height:300px; /* Or whatever */
     text-decoration: none;
-    border-top: 1px solid rgb(124, 9, 255);
+    margin-bottom: 1.2em;
     background-color: #7f8fa6;
 }
 .post:hover{
     .title{
-        font-size: 32px;
+        font-size: 36px;
     }
 }
 .prof{
@@ -128,4 +136,24 @@ main{
       ul {
           margin-top: 40px;
       }
+  }
+  @media screen and (max-width: 1044px) {
+    main{
+        flex-direction: column;
+    }
+    #Sidebar{
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        li{
+            display: inline;
+        }
+    }
+    #Projects{
+        word-wrap: break-word;
+    }
+    .copyright{
+        position:fixed;
+        color: #2f3640;
+    }
   }

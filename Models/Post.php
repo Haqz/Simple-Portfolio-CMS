@@ -32,9 +32,9 @@ class Post{
             echo '
             <a href="article?id='.$row['id'].'" class="post">
                 <div>
-                    <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
+                    <p class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</p>
                     <p class="content">'.$row['message'].'</p>
-                    <span class="time">'.$time.'</span>
+                    <p class="time">'.$time.'</p>
                 </div>
             </a>
           ';

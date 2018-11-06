@@ -23,6 +23,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet"> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -48,7 +49,6 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   
     <?php
       $post->getPostsStyled(false);
-      //$user->Register("ADmin","maszynista91@gmail.com", "MamaMama1");
       if(isset($_SESSION['error_mail'])){
         echo $_SESSION['error_mail'];
         unset($_SESSION['error_mail']);
@@ -63,9 +63,14 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
   </div>
   <div id="Projects">
-    <div>
-      aaaaaaaaaaaasdasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    </div>
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
   </div>
   </div>
     </main>

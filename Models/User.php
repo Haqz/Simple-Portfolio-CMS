@@ -61,7 +61,7 @@ class User{
                 $validate = false;
                 $_SESSION['error_pass'] = "Password is too weak. Minimum 8 chars";
             }
-            $pass = password_hash($pass, PASSWORD_DEFAULT);
+            $pass = password_hash($pass, PASSWORD_ARGON2I);
             try{
                 $result = $this->db->query("SELECT COUNT(id) FROM users WHERE mail = '$mail'");
                 $count = $result->fetchColumn(); 
