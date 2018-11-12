@@ -1,18 +1,18 @@
 <?php
-error_reporting(0);
 require_once './bbcode.php';
 require "scssphp/scss.inc.php";
 require 'Models/Post.php';
 require 'Models/User.php';
+require 'Models/Settings.php';
 
 $post = new Post;
 $scss = new scssc();
 $user = new User;
+$settings = new Settings;
 
-$directory = "stylesheets";
 $scss->setImportPaths("scss/");
 $scss->setVariables(array(
-'color' => "#f1aaaa"
+'background' => $settings->getStyleClass("background")
 ));
 echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
@@ -44,8 +44,8 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
     <p class="copyright">@Copyright 2018 by Haqz</p>
   </div>
 <div class="container">
+    <h2 class="indexHeader" >Recent on blog</h2>
   <div id="Posts" class="Posts">
-    
   
     <?php
       $post->getPostsStyled(false);
@@ -62,15 +62,30 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
     ?>
 
   </div>
+  
+  <h2 class="indexHeader">Recent projects</h2>
   <div id="Projects">
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  <a href="" class="post">
+                <div>
+                    <p class="title">'Lorem ipsum'</p>
+                    <p class="content">'.$row['message'].'</p>
+                    <p class="time">'.$time.'</p>
+                </div>
+            </a>
+            <a href="" class="post">
+                <div>
+                    <p class="title">'Lorem ipsum'</p>
+                    <p class="content">'.$row['message'].'</p>
+                    <p class="time">'.$time.'</p>
+                </div>
+            </a>
+            <a href="" class="post">
+                <div>
+                    <p class="title">'Lorem ipsum'</p>
+                    <p class="content">'.$row['message'].'</p>
+                    <p class="time">'.$time.'</p>
+                </div>
+            </a>
   </div>
   </div>
     </main>

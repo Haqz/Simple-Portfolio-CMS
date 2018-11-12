@@ -4,14 +4,14 @@
 body{
     margin:0;
     min-height:100vh;
-    min-width:100vw
+    min-width:100%;
 }
 main{  
     margin: 0;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 100%;
     display: flex;  /*enables flex content for its children*/
-    background-color: #dcdde1;
+    background-color: #4b4b4b;
     
 }
 .container{
@@ -28,7 +28,7 @@ main{
 #Sidebar{
     flex-direction: column;
     color: white;
-    background-color: #2f3640;
+    background-color: $background;
 }
 #Projects{
     display: flex;
@@ -52,15 +52,22 @@ main{
         padding: 5px;
         text-align: right;
     }
+    color:#3d3d3d;
     width: 300px;  /* Or whatever */
     height:300px; /* Or whatever */
     text-decoration: none;
     margin-bottom: 1.2em;
-    background-color: #7f8fa6;
+    filter: drop-shadow(2px 2px 0.1em  #ffcccc);
+    background-color: #ffcccc;
 }
 .post:hover{
     .title{
         font-size: 36px;
+    }
+}
+.post:visited{
+    .title{
+        color:#4b4b4b;
     }
 }
 .prof{
@@ -86,15 +93,16 @@ main{
 .underName{
     text-align: center;
     margin:0;
-    color: #e1b12c;
+    color: #ff9f1a;
     padding-bottom: 5px;
-    border-bottom: 10px dashed #353b48;
+    border-bottom: 10px dashed #4b4b4b;
 }
 .list { 
     padding: 0; 
     list-style: none; 
     text-align: center;
-    flex-grow: 3;
+    margin-left: 5px;
+    margin-right: 5px;
     li { 
         position: relative; 
         padding: 15px 0;
@@ -117,7 +125,7 @@ main{
         height: 2px;
         left: 50%;
         position: absolute;
-        background: #fff;
+        background: #18dcff;
         transition: width 0.3s ease 0s, left 0.3s ease 0s;
         width: 0;
       }
@@ -157,3 +165,8 @@ main{
         color: #2f3640;
     }
   }
+.indexHeader{
+    text-align: center;
+    font-size: 36px;
+    color:rgb(228, 226, 226);
+}
