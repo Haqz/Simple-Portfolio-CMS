@@ -52,8 +52,8 @@ class Post{
                 foreach($result1 as $row) {
                     $time = date("Y-m-d", $row['time']);
                     echo '
-                        <div class="post">
-                            <span class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</span>
+                        <div class="article">
+                            <p class="title">'.htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8').'</p>
                             <p class="content">'.$row['message'].'</p>
                             <span class="time">'.$time.'</span>
                         </div>
