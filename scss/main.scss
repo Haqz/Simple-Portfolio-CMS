@@ -29,6 +29,8 @@ main{
     flex-direction: column;
     color: white;
     background-color: $background;
+    padding-left: 8px; 
+    padding-right: 8px;
 }
 #Projects{
     display: flex;
@@ -113,21 +115,20 @@ main{
             letter-spacing: 0.15em;
             
             display: inline-block;
-            padding: 15px 20px;
+            padding: 15px 5px;
             position: relative;
           }
       }
-      .a:after {    
-        background: none repeat scroll 0 0 transparent;
-        bottom: 0;
-        content: "";
-        display: block;
-        height: 2px;
-        left: 50%;
-        position: absolute;
+      .a:after {
         background: #18dcff;
-        transition: width 0.3s ease 0s, left 0.3s ease 0s;
-        width: 0;
+        content: '';
+        position: absolute;
+        width: 0; 
+        height: 3px;
+        display: block;
+        margin-top: 5px;
+        right: 0;
+        transition: width .3s cubic-bezier(.68,-0.55,.27,1.55);
       }
       .a:hover:after { 
         width: 100%; 

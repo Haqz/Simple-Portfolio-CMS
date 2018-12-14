@@ -1,14 +1,17 @@
 <?php
 require_once './bbcode.php';
-require "scssphp/scss.inc.php";
-require 'Models/Post.php';
-require 'Models/User.php';
-require 'Models/Settings.php';
 
-$post = new Post;
-$scss = new scssc();
-$user = new User;
-$settings = new Settings;
+include 'Classes/Autoloader.php';
+try{
+  $post = new Post;
+  $user = new User;
+  $settings = new Settings;
+$scss = new scssc;
+}catch(Exception $e){
+  echo $e->getMessage();
+}
+
+
 
 $scss->setImportPaths("scss/");
 $scss->setVariables(array(

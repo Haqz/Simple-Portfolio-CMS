@@ -25,8 +25,17 @@ class Settings{
     public function getAuthor(){
         return $this->author;
     }
+    public function getStyleFile($file = "tmp/main.uwu"){
+        $myfile = fopen($file, "r");
+        if($myfile == null) return false;
+        return fread($myfile,filesize($file));
+        fclose($myfile);
+    }
     public function getStyleClass($class){
         return $this->style[$class];
+        if($this->style[$class] == null){
+            return false;
+        }
     }
     public function setName($name){
         $name1 = $this->getName();
