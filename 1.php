@@ -13,4 +13,4 @@ try{
 }
 
 
-print_r($post->findOnePostData(51));
+print_r($post->findPostData(51));

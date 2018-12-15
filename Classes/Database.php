@@ -23,9 +23,45 @@ class Database
 
     public function getOne($id,$table)
     {
-        $sql = "SELECT * FROM $table WHERE id = $id";
-        $stmt = $this->db->query($sql);
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $row;
+        try{
+            $sql = "SELECT * FROM $table WHERE id = $id";
+            $stmt = $this->db->query($sql);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!$row) {
+                throw new Exception('No row found');
+            }
+            return $row;
+        } catch(Exception $e){
+            echo "Exception found: ".$e->getMessage();
+        }
+    }
+    public function getAll($table)
+    {
+        try{
+            $sql = "SELECT * FROM $table";
+            $stmt = $this->db->query($sql);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!$row) {
+                throw new Exception('No row found');
+            }
+            return $row;
+        } catch(Exception $e){
+            echo "Exception found: ".$e->getMessage();
+        }
+    }
+    public function getLimited($table, $limit = 6)
+    {
+        try{
+            $sql = "SELECT * FROM $table WHERE id = $id ORDER BY id DESC LIMIT $limit";
+            $stmt = $this->db->query($sql);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if (!$row) {
+                throw new Exception('No row found');
+            }
+            return $row;
+        } catch(Exception $e){
+            echo "Exception found: ".$e->getMessage();
+        }
+        
     }
 }

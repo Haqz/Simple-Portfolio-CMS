@@ -1,22 +1,24 @@
 <?php
-require_once './bbcode.php';
+require './bbcode.php';
 
-include 'Classes/Autoloader.php';
+require 'Classes/Autoloader.php';
 try{
-  $post = new Post;
-  $user = new User;
-  $settings = new Settings;
-$scss = new scssc;
+    $db = new Database();
+    $post = new Post($db);
+    $user = new User;
+    $settings = new Settings;
+    $scss = new scssc;
 }catch(Exception $e){
-  echo $e->getMessage();
+    echo $e->getMessage();
 }
 
 
 
 $scss->setImportPaths("scss/");
-$scss->setVariables(array(
-'background' => $settings->getStyleClass("background")
-));
+$scss->setVariables(
+    array(
+      'background' => $settings->getStyleClass("background"))
+);
 echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
 ?>
@@ -51,6 +53,10 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   <div id="Posts" class="Posts">
   
     <?php
+    //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+    // Depracted and need to be done!!!
+    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    /*
       $post->getPostsStyled(false);
       if(isset($_SESSION['error_mail'])){
         echo $_SESSION['error_mail'];
@@ -61,7 +67,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
       }else if(isset($_SESSION['error_pass'])){
         echo $_SESSION['error_pass'];
         unset($_SESSION['error_pass']);
-      }
+      }*/
     ?>
 
   </div>

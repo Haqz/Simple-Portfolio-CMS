@@ -1,3 +1,0 @@
-.underName{
-    color: white;
-}

@@ -8,6 +8,15 @@
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/Haqz/Simple-Portoflio-CMS
  */
+
+ /*
+
+Depracted!!!!
+Need to be redesigned and rewritten soon!!!
+
+
+*/
+
 class User
 {
     public $nick;

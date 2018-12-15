@@ -138,5 +138,5 @@ class Post //Post model
     {
         return $this->db->getOne($id, 'messages');
     }
-
+    
 }
