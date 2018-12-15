@@ -22,5 +22,5 @@ A: Go to issues and post these informations:<br>
 <code>System:</code><br>
 <code>Server:</code><br>
 <code>Error code</code>:</p>
-<p>###License<br>
-See <a href="http://license.md">license.md</a></p>
+<h3><a id="License_29"></a>License</h3>
+<p>See <a href="http://license.md">license.md</a></p>
