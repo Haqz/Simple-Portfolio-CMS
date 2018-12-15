@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-# Simple Portfolio CMS
-Simple as posible CMS for making portfolio
-
-## Main features
-- Simplicity
-Becouse nobody like complicated things
-- Flexiblity
-You can change everything from
-- All in one
-Just download, everything works at start 
-
-## FAQ
-Q: What I can change?
-A: Anything from ACP, not everything, like source code, but you can change: style, users, themes and some more things.
-
-Q: Can I edit source code?
-A: Yes, but I won't help you if you get in trouble.
-
-Q: How can I change style?
-A: There three ways: directly edit `.scss` files, directly edit `assets/user.style` file, or edit through ACP.
-
-Q: I've error!!
-A: Go to issues and post these informations:
-`PHP version:`
-`System:`
-`Server:`
-`Error code`:
-
-###License
-See license.md
-=======
 <h1><a id="Simple_Portfolio_CMS_1"></a>Simple Portfolio CMS</h1>
 <p>Simple as posible CMS for making portfolio</p>
 <h2><a id="Main_features_4"></a>Main features</h2>
@@ -57,4 +24,3 @@ A: Go to issues and post these informations:<br>
 <code>Error code:</code></p>
 <h3><a id="License_29"></a>License</h3>
 <p>See <a href="http://license.md">license.md</a></p>
->>>>>>> 7c4edea3ea6556c1a264e6d92aeb65361dac6b33
