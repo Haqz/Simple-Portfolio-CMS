@@ -1,15 +1,23 @@
 <?php
-require_once './bbcode.php';
+/**
+ * MyClass File Doc Comment
+ *
+ * @category Models
+ * @package  S-P-CMS
+ * @author   Haqz <maszynista91@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     https://github.com/Haqz/Simple-Portoflio-CMS
+ */
+
 class Post //Post model
 {
     public $title = "";
     public $content = "";
     public $time = "";
-
-    public function __construct()
+    private $_database = null;
+    public function __construct(Database $database)
     {
-        $this->db = new PDO('sqlite:./messaging.sqlite3');
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->db = $database;
     } 
 
     public function __destruct()
@@ -95,7 +103,8 @@ class Post //Post model
         }
     }
 
-    public function findPerviousPost($id){
+    public function findPerviousPost($id)
+    {
         $result = $this->db->query("SELECT COUNT(*) FROM messages WHERE id=$id-1");
         if ($result) {
             $count = $result->fetchColumn(); 
@@ -125,4 +134,9 @@ class Post //Post model
         $affected_rows = $stmt->rowCount();
         $file_db = null;
     }
+    public function findPostData($id)
+    {
+        return $this->db->getOne($id, 'messages');
+    }
+
 }

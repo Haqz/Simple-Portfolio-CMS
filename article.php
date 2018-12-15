@@ -1,11 +1,14 @@
 <?php
-require 'Models/Post.php';
-require "scssphp/scss.inc.php";
-require 'Models/Settings.php';
 
+include 'Classes/Autoloader.php';
+try{
+  $post = new Post;
+  $user = new User;
+  $settings = new Settings;
 $scss = new scssc();
-$settings = new Settings;
-
+}catch(Exception $e){
+  echo $e->getMessage();
+}
 $scss->setImportPaths("scss/");
 $scss->setVariables(array(
 'background' => $settings->getStyleClass("background")
