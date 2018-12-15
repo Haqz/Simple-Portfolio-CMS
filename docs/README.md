@@ -11,16 +11,16 @@ You can change everything from
 Just download, everything works at start 
 
 ## FAQ
->Q: What I can change?
+Q: What I can change?
 A: Anything from ACP, not everything, like source code, but you can change: style, users, themes and some more things.
 
->Q: Can I edit source code?
+Q: Can I edit source code?
 A: Yes, but I won't help you if you get in trouble.
 
->Q:How can I change style?
-There three ways: directly edit `.scss` files, directly edit `assets/user.style` file, or edit through ACP.
+Q: How can I change style?
+A: There three ways: directly edit `.scss` files, directly edit `assets/user.style` file, or edit through ACP.
 
->Q: I've problem with this!!
+Q: I've error!!
 A: Go to issues and post these informations:
 `PHP version:`
 `System:`
@@ -28,4 +28,4 @@ A: Go to issues and post these informations:
 `Error code`:
 
 ###License
-See LICENSE.md
+See license.md
