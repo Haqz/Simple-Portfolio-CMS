@@ -11,8 +11,8 @@ You can change everything from
 Just download, everything works at start 
 
 ## FAQ
-Q: What I can change?
-A: Anything from ACP, not everything, like source code, but you can change: style, users, themes and some more things.
+*Q: What I can change?
+*A: Anything from ACP, not everything, like source code, but you can change: style, users, themes and some more things.
 
 Q: Can I edit source code?
 A: Yes, but I won't help you if you get in trouble.
