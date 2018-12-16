@@ -1,0 +1,77 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+
+.blog {
+    background-color: #c56cf0;
+    margin: 0;
+    padding: 0;
+
+    h1 {
+        @include h1-properties;
+    }
+
+    .container {
+        .row {
+            div {
+                height: 40vh;
+                position: relative;
+                margin-bottom: 25px;
+
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    .blog-div {
+                        @include div-for-blog;
+
+                        h1 {
+                            @include h1-for-blog;
+                        }
+                    }
+
+                    .first {
+                        @include div-for-blog;
+
+                        img {
+                            transition: $transition-for-blog;
+                        }
+
+                        h1 {
+                            @include h1-for-blog;
+
+                        }
+
+                        p {
+                            font-size: $p-blog-font-size;
+                        }
+
+                        &:hover img {
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    .second {
+                        @include div-for-blog;
+
+                        img {
+                            transition: $transition-for-blog;
+
+                        }
+
+                        h1 {
+                            @include h1-for-blog;
+                        }
+
+                        p {
+                            font-size: $p-blog-font-size;
+                        }
+
+                        &:hover img {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+
+.projects {
+    background-color: #ff9f1a;
+    padding-bottom: 30px;
+
+    div {
+        background-color: cadetblue;
+        height: 40vh;
+        position: relative;
+
+    }
+
+    h1 {
+        @include h1-properties;
+    }
+}

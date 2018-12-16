@@ -1,0 +1,23 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+
+.about {
+    padding: 20px;
+    height: 50vh;
+    position: relative;
+    background-color: #ff3838;
+
+    .about-content {
+        @include center-transform;
+
+        h1 {
+            @include h1-properties;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 20px;
+        }
+    }
+
+}

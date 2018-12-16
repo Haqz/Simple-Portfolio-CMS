@@ -1,0 +1,23 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+
+header {
+    height: 100vh;
+    background: url(hero-image2.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .text {
+        position: absolute;
+        top: 40%;
+        right: 10%;
+
+        h1 {
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 40px;
+        }
+    }
+}
