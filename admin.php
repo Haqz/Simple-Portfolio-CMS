@@ -1,12 +1,14 @@
 <?php
-require "scssphp/scss.inc.php";
-require 'Models/User.php';
-require 'Models/Post.php';
-require_once './bbcode.php';
-
-$scss = new scssc();
-$user = new User;
-$post = new Post;
+require 'Classes/Autoloader.php';
+try{
+    $db = new Database();
+    $post = new Post($db);
+    $user = new User($db);
+    $settings = new Settings($db);
+    $scss = new scssc;
+}catch(Exception $e){
+    echo $e->getMessage();
+}
 
 $scss->setImportPaths("scss/");
 echo "<style>".$scss->compile('@import "admin.scss"')."</style>";

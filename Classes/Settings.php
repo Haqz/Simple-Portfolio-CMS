@@ -10,29 +10,25 @@
  */
 
 /*
-
 Depracted!!!!
 Need to be redesigned and rewritten soon!!!
-
-
 */
 
 class Settings
 {
 
-    public function __construct()
+    private $_database = null;
+    public function __construct(Database $database)
     {
-        $this->db = new PDO('sqlite:./messaging.sqlite3');
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $settings = $this->db->query("SELECT * FROM settings");
-        $sett1 = $settings->fetch(PDO::FETCH_ASSOC);
+        $this->db = $database;
+        $style = $this->db->getAll('style');
 
-        $style = $this->db->query("SELECT * FROM style");
-        $style1 = $style->fetch(PDO::FETCH_ASSOC);
+        $settings = $this->db->getAll('settings');
 
-        $this->name = $sett1['name'];
-        $this->author = $sett1['author'];
-        $this->style = $style1;
+
+        $this->name = $settings['name'];
+        $this->author = $settings['author'];
+        $this->style = $style;
     } 
     public function __destruct()
     {
@@ -55,6 +51,10 @@ class Settings
         return fread($myfile, filesize($file));
         fclose($myfile);
     }
+/*
+Depracted!!!!
+Need to be redesigned and rewritten soon!!!
+*/
     public function getStyleClass($class)
     {
         return $this->style[$class];

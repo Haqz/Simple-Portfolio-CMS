@@ -10,23 +10,17 @@
  */
 
  /*
-
 Depracted!!!!
 Need to be redesigned and rewritten soon!!!
-
-
 */
 
 class User
 {
-    public $nick;
-    public $mail;
-
-    public function __construct()
+    private $_db = null;
+    public function __construct(Database $db)
     {
         session_start();
-        $this->db = new PDO('sqlite:./messaging.sqlite3');
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->db = $db;
     } 
     public function __destruct()
     {
@@ -34,7 +28,7 @@ class User
     }
     public function Login($nick, $pass)
     {
-        if (!isset($nick)|| !isset($pass)) {
+        if (!isset($nick) || !isset($pass)) {
             echo "<h3>No login or pass typed</h3>";
             return false;
         }

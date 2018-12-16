@@ -64,4 +64,9 @@ class Database
         }
         
     }
+    public function query($query)
+    {
+        $stmt = $this->db->query($query);
+        return $stmt;
+    }
 }
