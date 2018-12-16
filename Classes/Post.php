@@ -40,5 +40,9 @@ class Post //Post model
     {
         return $this->db->getOne($id, 'messages');
     }
+    public function getLatestPostsData()
+    {
+        return $this->db->getLimited('messages');
+    }
     
 }

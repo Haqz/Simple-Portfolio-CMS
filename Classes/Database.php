@@ -52,9 +52,9 @@ class Database
     public function getLimited($table, $limit = 6)
     {
         try{
-            $sql = "SELECT * FROM $table WHERE id = $id ORDER BY id DESC LIMIT $limit";
+            $sql = "SELECT * FROM $table ORDER BY id DESC LIMIT $limit";
             $stmt = $this->db->query($sql);
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if (!$row) {
                 throw new Exception('No row found');
             }

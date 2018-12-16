@@ -19,7 +19,7 @@ $scss->setVariables(
     array(
       'background' => $settings->getStyleClass("background"))
 );
-echo "<style>".$scss->compile('@import "main.scss"')."</style>";
+echo "<style>".$scss->compile('@import "main.sass"')."</style>";
 
 ?>
 <!DOCTYPE html>
@@ -53,21 +53,16 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   <div id="Posts" class="Posts">
   
     <?php
-    //vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-    // Depracted and need to be done!!!
-    //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    /*
-      $post->getPostsStyled(false);
-      if(isset($_SESSION['error_mail'])){
-        echo $_SESSION['error_mail'];
-        unset($_SESSION['error_mail']);
-      } else if(isset($_SESSION['error_nick'])){
-        echo $_SESSION['error_nick'];
-        unset($_SESSION['error_nick']);
-      }else if(isset($_SESSION['error_pass'])){
-        echo $_SESSION['error_pass'];
-        unset($_SESSION['error_pass']);
-      }*/
+      $postsData = $post->getLatestPostsData();
+    foreach ($postsData as $row) {
+        echo 
+        "<a href=article?id=".$row['id']." class='post'>".
+          "<div>"
+            ."<p class='title'>".htmlspecialchars($row['title'])."</p>"
+            ."<p class ='content'>".$row['message']."</p>"
+          ."</div>"
+        ."</a>";
+    }
     ?>
 
   </div>

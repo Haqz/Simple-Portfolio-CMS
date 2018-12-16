@@ -5,7 +5,7 @@ require 'Classes/Autoloader.php';
 try{
     $db = new Database();
     $post = new Post($db);
-    $user = new User;
+    $user = new User($db);
     $settings = new Settings($db);
     $scss = new scssc;
 }catch(Exception $e){
@@ -13,5 +13,5 @@ try{
 }
 
 
-print_r($post->findPostData(51));
-//siema
+$postsData = $db->getLimited('messages');
+print_r($postsData);
