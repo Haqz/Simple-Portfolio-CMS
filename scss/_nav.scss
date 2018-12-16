@@ -1,0 +1,23 @@
+@import '_mixin.scss';
+@import '_variables.scss';
+
+nav {
+    background-color: transparent;
+
+    a {
+        img {
+            border-radius: 50%;
+            width: 40px;
+            margin-right: 10px;
+        }
+    }
+
+    div {
+        ul {
+            li {
+                margin: 0 30px;
+                font-size: 20px;
+            }
+        }
+    }
+}

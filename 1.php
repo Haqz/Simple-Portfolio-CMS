@@ -13,5 +13,5 @@ try{
 }
 
 
-$postsData = $db->getLimited('messages');
-print_r($postsData);
+print_r($post->findPostData(51));
+
