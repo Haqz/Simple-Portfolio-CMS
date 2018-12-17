@@ -24,52 +24,70 @@
                     .blog-div {
                         @include div-for-blog;
 
-                        h1 {
-                            @include h1-for-blog;
-                        }
-                    }
-
-                    .first {
-                        @include div-for-blog;
-
-                        img {
-                            transition: $transition-for-blog;
-                        }
 
                         h1 {
                             @include h1-for-blog;
-
+                            z-index: 10;
                         }
 
                         p {
                             font-size: $p-blog-font-size;
                         }
 
-                        &:hover img {
-                            transform: scale(1.2);
-                        }
-                    }
-
-                    .second {
-                        @include div-for-blog;
-
                         img {
                             transition: $transition-for-blog;
-
-                        }
-
-                        h1 {
-                            @include h1-for-blog;
-                        }
-
-                        p {
-                            font-size: $p-blog-font-size;
                         }
 
                         &:hover img {
                             transform: scale(1.2);
                         }
+
+                        .overlay {
+                            @include overlay-for-blog;
+
+                            p {
+                                @include center-transform;
+                                @include p-for-blog;
+                            }
+
+                            button {
+                                @include button-for-blog;
+                                transition: .2s all;
+
+                                &:hover {
+                                    background-color: white;
+                                    color: black;
+                                }
+                            }
+                        }
+
+                        &:hover .overlay {
+                            height: 100%;
+                        }
                     }
+
+                    .first {}
+
+                    // .second {
+                    //     @include div-for-blog;
+
+                    //     img {
+                    //         transition: $transition-for-blog;
+
+                    //     }
+
+                    //     h1 {
+                    //         @include h1-for-blog;
+                    //     }
+
+                    //     p {
+                    //         font-size: $p-blog-font-size;
+                    //     }
+
+                    //     &:hover img {
+                    //         transform: scale(1.2);
+                    //     }
+                    // }
                 }
             }
         }

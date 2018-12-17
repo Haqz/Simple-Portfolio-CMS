@@ -107,8 +107,12 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
             <a href='article?id=".$row['id']."'>
               <div class='first blog-div'>
                 <img src='asets/images/blog1.jpg' alt=''>
-                <h1>Tu testuj Raloseq</h1>
+                <h1>Tu testuj Raloseq(animacja do ustalenia)</h1>
                 <p>Lorem ipsum</p>
+                <div class="overlay">
+                  <p>Początki programowania w php</p>
+                  <button>Check it!</button>
+                </div>
               </div>
             </a>
         </div>

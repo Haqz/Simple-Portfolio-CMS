@@ -30,3 +30,37 @@
     position: relative;
     overflow: hidden;
 }
+
+@mixin p-for-blog {
+    color: white;
+    font-size: 20px;
+    width: 80%;
+}
+
+@mixin button-for-blog {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 50%;
+    font-size: 20px;
+}
+
+@mixin overlay-for-blog {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    background-color: blue;
+    height: 0;
+    width: 100%;
+    transition: .4s all;
+    background-color: rgba(0, 0, 0, .8);
+    overflow: hidden;
+}
