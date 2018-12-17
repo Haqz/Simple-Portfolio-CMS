@@ -41,12 +41,12 @@ class User
                 $row = $result1->fetch(PDO::FETCH_ASSOC);
                 if (password_verify($pass, $row['pass'])) {
                     $_SESSION['logged'] = true;
-                    echo "Works gut";
+                    return true;
                 } else {
-                    echo"false1";
+                    Throw new Exception('Passwords dont match');
                 }
             } else {
-                echo "false\n";
+                Throw new Exception('No user found');
             }
         }
     }

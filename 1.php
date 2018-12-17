@@ -1,7 +1,7 @@
 <?php
 
 require 'Classes/Autoloader.php';
-
+require 'Configs/Globals.php';
 try{
     $db = new Database();
     $post = new Post($db);
@@ -12,6 +12,4 @@ try{
     echo $e->getMessage();
 }
 
-
-print_r($post->findPostData(51));
-
+echo $GLOBALS['assets'];

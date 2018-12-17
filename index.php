@@ -1,6 +1,6 @@
 <?php
 require './bbcode.php';
-
+require 'Configs/Globals.php';
 require 'Classes/Autoloader.php';
 try{
     $db = new Database();
@@ -74,7 +74,10 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
   <section class="about">
     <div class="about-content">
       <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae culpa ipsam optio vel nostrum, quos facere cumque blanditiis sed sequi accusamus, soluta corporis vitae provident! Voluptatibus repellat porro quaerat, eum optio dignissimos deleniti consequuntur velit architecto harum. Veniam possimus quos fugit ducimus, eos ab impedit fugiat in debitis error.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae culpa ipsam optio vel nostrum,
+      quos facere cumque blanditiis sed sequi accusamus, soluta corporis vitae provident! 
+      Voluptatibus repellat porro quaerat, eum optio dignissimos deleniti consequuntur velit architecto harum. 
+      Veniam possimus quos fugit ducimus, eos ab impedit fugiat in debitis error.</p>
     </div>
   </section>
 
@@ -84,55 +87,30 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
     <h1>Recent blog entries</h1>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-4">
-            <a href="#">
-              <div class="first blog-div">
-                <img src="images/blog1.jpg" alt="">
-                <h1>Moje początki z programowaniem</h1>
-                <p>PHP to mój pierwszy język</p>
+        <?php
+        $postsData = $post->getLatestPostsData();
+        foreach ($postsData as $row) {
+            echo 
+            "
+            <div class='col-md-6 col-lg-4'>
+            <a href='article?id=".$row['id']."'>
+              <div class='first blog-div'>
+                <img src='asets/images/blog1.jpg' alt=''>
+                <h1>".htmlspecialchars($row['title'])."</h1>
+                <p>".$row['message']."</p>
               </div>
             </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#">
-            <div class="second blog-div">
-                <img src="images/blog2.jpg" alt="">
-                <h1>Moje początki z programowaniem</h1>
-                <p>PHP to mój pierwszy język</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#">
-            <div class="third blog-div">
-                <h1>Moje początki z programowaniem</h1>
-                <p>PHP to mój pierwszy język</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#">
-            <div class="four blog-div">
-                <h1>Moje początki z programowaniem</h1>
-                <p>PHP to mój pierwszy język</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#">
-            <div class="five blog-div">
-                <h1>Moje początki z programowaniem</h1>
-                <p>PHP to mój pierwszy język</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#">
-            <div class="six blog-div">
-                <h1>Moje początki z programowaniem</h1>
-                <p>PHP to mój pierwszy język</p>
-            </div>
-          </a>
+        </div>";
+        }
+        ?>
+        <div class='col-md-6 col-lg-4'>
+            <a href='article?id=".$row['id']."'>
+              <div class='first blog-div'>
+                <img src='asets/images/blog1.jpg' alt=''>
+                <h1>Tu testuj Raloseq</h1>
+                <p>Lorem ipsum</p>
+              </div>
+            </a>
         </div>
       </div>
     </div>
@@ -173,18 +151,7 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
   <h2 class="indexHeader" >Recent on blog</h2>
   <div id="Posts" class="Posts">
    -->
-    <?php
-      $postsData = $post->getLatestPostsData();
-    foreach ($postsData as $row) {
-        echo 
-        "<a href=article?id=".$row['id']." class='post'>".
-          "<div>"
-            ."<p class='title'>".htmlspecialchars($row['title'])."</p>"
-            ."<p class ='content'>".$row['message']."</p>"
-          ."</div>"
-        ."</a>";
-    }
-    ?>
+    
 
   <!-- </div> -->
   
