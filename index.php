@@ -97,7 +97,11 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
               <div class='first blog-div'>
                 <img src='asets/images/blog1.jpg' alt=''>
                 <h1>".htmlspecialchars($row['title'])."</h1>
-                <p>".$row['message']."</p>
+                <p>Lorem Ipsum</p>
+                <div class='overlay'>
+                  <p>".$row['message']."</p>
+                  <button>Check it!</button>
+                </div>
               </div>
             </a>
         </div>";

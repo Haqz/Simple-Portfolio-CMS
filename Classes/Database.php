@@ -10,17 +10,31 @@
  */
 class Database
 {
+    /**
+     * Return row
+     * 
+     * @param string $file File to construct class
+     */
     public function __construct($file = 'messaging.sqlite3')
     {
         $this->db = new PDO('sqlite:./'.$file);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } 
-
+    /**
+     * Destruct database
+     */
     public function __destruct()
     {
         $this->db = null;
     }
-
+    /**
+     * Return one row
+     * 
+     * @param int    $id    Id of row
+     * @param string $table Table to query on
+     * 
+     * @return Object
+     */
     public function getOne($id,$table)
     {
         try{
@@ -35,6 +49,13 @@ class Database
             echo "Exception found: ".$e->getMessage();
         }
     }
+    /**
+     * Return all rows
+     * 
+     * @param string $table Table to query on
+     * 
+     * @return Object
+     */
     public function getAll($table)
     {
         try{
@@ -49,6 +70,14 @@ class Database
             echo "Exception found: ".$e->getMessage();
         }
     }
+    /**
+     * Return limited rows
+     * 
+     * @param string $table Table to query on
+     * @param int    $limit How many rows to return
+     * 
+     * @return Object
+     */
     public function getLimited($table, $limit = 6)
     {
         try{
@@ -64,6 +93,13 @@ class Database
         }
         
     }
+    /**
+     * Return query object
+     * 
+     * @param string $query Query to execute
+     * 
+     * @return Object
+     */
     public function query($query)
     {
         $stmt = $this->db->query($query);

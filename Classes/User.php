@@ -8,24 +8,34 @@
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/Haqz/Simple-Portoflio-CMS
  */
-
- /*
-Depracted!!!!
-Need to be redesigned and rewritten soon!!!
-*/
-
 class User
 {
     private $_db = null;
+    /**
+     * Construct
+     * 
+     * @param Database $db Database
+     */
     public function __construct(Database $db)
     {
         session_start();
         $this->db = $db;
     } 
+    /**
+     * Destruct database
+     */
     public function __destruct()
     {
         $this->db = null;
     }
+    /**
+     * Logs in user
+     * 
+     * @param string $nick Username
+     * @param string $pass User password
+     * 
+     * @return bool
+     */
     public function Login($nick, $pass)
     {
         if (!isset($nick) || !isset($pass)) {
@@ -50,6 +60,15 @@ class User
             }
         }
     }
+    /**
+     * Logs in user
+     * 
+     * @param string $nick Username
+     * @param string $mail User mail
+     * @param string $pass User password
+     * 
+     * @return bool
+     */
     public function Register($nick,$mail, $pass) 
     {
         if (isset($nick)) {

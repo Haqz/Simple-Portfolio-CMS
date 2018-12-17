@@ -9,15 +9,15 @@
  * @link     https://github.com/Haqz/Simple-Portoflio-CMS
  */
 
-/*
-Depracted!!!!
-Need to be redesigned and rewritten soon!!!
-*/
-
 class Settings
 {
 
     private $_database = null;
+    /**
+     * Construct
+     * 
+     * @param Database $database Database
+     */
     public function __construct(Database $database)
     {
         $this->db = $database;
@@ -30,18 +30,38 @@ class Settings
         $this->author = $settings['author'];
         $this->style = $style;
     } 
+    /**
+     * Destruct
+     */
     public function __destruct()
     {
-      $this->db = null;
+        $this->db = null;
     }
+    /**
+     * Return name
+     * 
+     * @return string
+     */
     public function getName()
     {
         return $this->name;
     }
+    /**
+     * Return author
+     * 
+     * @return string
+     */
     public function getAuthor()
     {
         return $this->author;
     }
+    /**
+     * Return custom css file content
+     * 
+     * @param string $file Custom style file
+     * 
+     * @return string
+     */
     public function getStyleFile($file = "tmp/main.uwu")
     {
         $myfile = fopen($file, "r");
@@ -51,10 +71,17 @@ class Settings
         return fread($myfile, filesize($file));
         fclose($myfile);
     }
-/*
-Depracted!!!!
-Need to be redesigned and rewritten soon!!!
-*/
+    /*
+    Depracted!!!!
+    Need to be redesigned and rewritten soon!!!
+    */
+    /**
+     * Return css class
+     * 
+     * @param string $class Class from database
+     * 
+     * @return string
+     */
     public function getStyleClass($class)
     {
         return $this->style[$class];
@@ -62,6 +89,13 @@ Need to be redesigned and rewritten soon!!!
             return false;
         }
     }
+    /**
+     * Sets owner name
+     * 
+     * @param string $name Name to be set
+     * 
+     * @return string
+     */
     public function setName($name)
     {
         $name1 = $this->getName();
