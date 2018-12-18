@@ -1,15 +1,18 @@
 <?php
-
+require 'vendor/autoload.php';
 require 'Classes/Autoloader.php';
 try{
-    $db = new Database();
-    $post = new Post($db);
-    $user = new User($db);
-    $settings = new Settings($db);
-    $scss = new scssc;
+    
+    //$post = new Post($db);
+    //$user = new User($db);
+    //$settings = new Settings($db);
+    //$scss = new scssc;
 }catch(Exception $e){
     echo $e->getMessage();
 }
+
+$db = new SPC\Database();
+$settings = new SPC\Settings($db);
 
 if ($_POST['sumbit']) {
     try{
