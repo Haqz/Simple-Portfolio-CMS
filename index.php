@@ -209,7 +209,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
     </div>
   </div> -->
   </main>
-
+        
       <!-- FOOTER -->
 
   <footer>
