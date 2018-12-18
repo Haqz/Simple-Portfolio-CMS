@@ -17,6 +17,12 @@
             text-decoration: none;
             color: black;
             font-size: 40px;
+
+            i {
+                &::before {
+                    font-family: 'Font Awesome 5 Free';
+                }
+            }
         }
     }
 
