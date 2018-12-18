@@ -33,7 +33,7 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
   <!-- BOOTSTRAP FILES -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -111,7 +111,6 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
               <div class='first blog-div'>
                 <img src='asets/images/blog1.jpg' alt=''>
                 <h1>Tu testuj Raloseq(animacja do)</h1>
-                <p>Lorem ipsum</p>
                 <div class="overlay">
                   <p>Początki programowania w php</p>
                   <button>Check it!</button>
@@ -129,17 +128,39 @@ echo "<style>".$scss->compile('@import "main.sass"')."</style>";
     <h1>My projects</h1>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-6 col-lg-4">
-          <h1>Pierwszy wpis</h1>
+        <div class="col-md-6 col-lg-4">
+            <div class='first project-div'>
+                <div class="description">
+                  <h1>Pierwszy projekt</h1>
+                  <a href="">
+                    <button>Check it!</button>
+                  </a>
+                </div>
+              </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <h1>Drugi wpis</h1>
+        <div class="col-md-6 col-lg-4">
+        <div class='first project-div'>
+                <div class="description">
+                  <h1>Pierwszy projekt</h1>
+                  <a href="">
+                    <button>Check it!</button>
+                  </a>
+                </div>
+              </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <h1>Trzeci wpis</h1>
+        <div class="col-md-6 col-lg-4">
+        <div class='first project-div'>
+                <div class="description">
+                  <h1>Pierwszy projekt</h1>
+                  <a href="">
+                    <button>Check it!</button>
+                  </a>
+                </div>
+              </div>
         </div>
       </div>
     </div>
+    <h1 class="git">Check more on github<a href=""><i class="fab fa-github"></i></a></h1>
   </section>
   <!-- <div id="Sidebar" class="column">
     <div class="aboutSmall">

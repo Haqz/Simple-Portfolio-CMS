@@ -4,15 +4,89 @@
 .projects {
     background-color: #ff9f1a;
     padding-bottom: 30px;
-
-    div {
-        background-color: cadetblue;
-        height: 40vh;
-        position: relative;
-
-    }
+    text-align: center;
 
     h1 {
         @include h1-properties;
+    }
+
+    .git {
+        font-size: 30px;
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 40px;
+        }
+    }
+
+    .container {
+
+
+        .row {
+
+
+            .project-div {
+                height: 40vh;
+                margin-bottom: 25px;
+                background: url(asets/images/project1.jpg) center no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+                box-shadow: 0 0 50px gray;
+                position: relative;
+                overflow: hidden;
+
+                .description {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 30%;
+                    background-color: rgba(0, 0, 0, .8);
+                    width: 100%;
+                    text-align: center;
+                    color: white;
+
+                    h1 {
+                        position: absolute;
+                        width: 100%;
+                        top: -5%;
+
+                        font-size: 30px;
+
+                        @media (max-width: 360px) {
+                            font-size: 20px;
+                            top: -20%;
+                        }
+                    }
+
+                    a {
+                        width: 100%;
+
+                        button {
+                            width: 60%;
+                            position: absolute;
+                            left: 50%;
+                            bottom: 10%;
+                            border-radius: 5px;
+                            border: none;
+                            border: 2px solid white;
+                            color: white;
+                            background-color: transparent;
+                            padding: 5px;
+                            cursor: pointer;
+                            transform: translateX(-50%);
+                            transition: .3s all;
+
+                            &:hover {
+                                color: black;
+                                background-color: white;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
     }
 }
