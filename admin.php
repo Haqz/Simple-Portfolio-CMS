@@ -12,12 +12,12 @@ try{
 
 $scss->setImportPaths("scss/");
 echo "<style>".$scss->compile('@import "admin.scss"')."</style>";
-if($_POST['login']){
+if ($_POST['login']) {
     $user->Login($_POST['nick'], $_POST['pass']);
     header('Location: admin.php', true, 301);
-    
 }
-function printSite($id){
+function printSite($id) 
+{
     switch($id){
         case 1:
             echo '
@@ -36,24 +36,23 @@ function printSite($id){
     }
 }
     $get = $_GET['site'];
-if($get){
+if ($get) {
     printSite($get);
 }
 
-if($_POST['unset']){
+if ($_POST['unset']) {
     unset($_SESSION['logged']);
 }
 $get = $_GET['site'];
 
-if($_POST['submit']){
+if ($_POST['submit']) {
     $f1 = $_POST['title'];
     $f2 = $_POST['content'];
     $date = new DateTime();
     $f3 = $date->getTimestamp();
-    $f2 = bbcode::tohtml($f2);
     $post->insertPost($f1, $f2, $f3);
     header('Location: admin.php', true, 301);
-  }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,29 +67,29 @@ if($_POST['submit']){
 <body>
 <?php
 
-    if(!$_SESSION['logged']){
-        echo '
-        <main id="Login">
-        <div class="container">
-            <div class="loginBox">
-                <span style="font-size: 36px;">Login :D</span>
-                <form method="post">
-                    <div>
-                        <input type="text" name="nick" placeholder="Username" required>
-                    </div>
-                    <div>
-                        <input type="password" name="pass" placeholder="Password" required>
-                    </div>
-                    <div>
-                        <input type="submit" name="login">
-                    </div>
-                </form>
-            </div>
+if (!$_SESSION['logged']) {
+    echo '
+    <main id="Login">
+    <div class="container">
+        <div class="loginBox">
+            <span style="font-size: 36px;">Login :D</span>
+            <form method="post">
+                <div>
+                    <input type="text" name="nick" placeholder="Username" required>
+                </div>
+                <div>
+                    <input type="password" name="pass" placeholder="Password" required>
+                </div>
+                <div>
+                    <input type="submit" name="login">
+                </div>
+            </form>
         </div>
-        </main>';
-    }else{
-        echo '';
-    }
+    </div>
+    </main>';
+} else {
+    echo '';
+}
 ?>
 <form method="post">
 <input type="submit" name="unset">

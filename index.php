@@ -1,6 +1,5 @@
 <?php
 require './bbcode.php';
-require 'Configs/Globals.php';
 require 'Classes/Autoloader.php';
 try{
     $db = new Database();

@@ -105,4 +105,26 @@ class Database
         $stmt = $this->db->query($query);
         return $stmt;
     }
+    /**
+     * Prepare statement
+     * 
+     * @param string $query Query to execute
+     * 
+     * @return Object
+     */
+    public function prepare($query)
+    {
+        return $this->db->prepare($query);
+    }
+    /**
+     * Prepare statement
+     * 
+     * @param Array $arr Query to execute
+     * 
+     * @return Object
+     */
+    public function execute(&$arr)
+    {
+        return $this->db->execute(array($arr));
+    }
 }
