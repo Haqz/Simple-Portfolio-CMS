@@ -160,7 +160,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
         </div>
       </div>
     </div>
-    <h1 class="git">Check more on github<a href=""><i class="fab fa-github"></i></a></h1>
+    <h1>Check more on github<a href=""><i class="fab fa-github"></i></a></h1>
   </section>
   <!-- <div id="Sidebar" class="column">
     <div class="aboutSmall">
