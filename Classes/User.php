@@ -61,7 +61,7 @@ class User
         }
     }
     /**
-     * Logs in user
+     * Register user
      * 
      * @param string $nick Username
      * @param string $mail User mail

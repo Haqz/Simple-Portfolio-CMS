@@ -13,3 +13,4 @@ try{
 }
 
 echo $GLOBALS['assets'];
+//test packet
