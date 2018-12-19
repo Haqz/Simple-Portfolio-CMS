@@ -4,5 +4,8 @@
     },
     "autoload": {
         "psr-4": {"SPC\\": "Classes/"}
+    },
+    "require": {
+        "slim/slim-skeleton": "^3.1"
     }
 }
