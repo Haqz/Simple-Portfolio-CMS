@@ -1,23 +1,36 @@
 @import '_mixin.scss';
 @import '_variables.scss';
 
-nav {
-    background-color: transparent;
+.navigation {
+    background-color: transparent !important;
+    position: fixed;
+    width: 100%;
 
     a {
+
         img {
             border-radius: 50%;
-            width: 40px;
+            width: 70px;
             margin-right: 10px;
         }
     }
 
     div {
+
+
         ul {
             li {
                 margin: 0 30px;
-                font-size: 20px;
+                font-size: 25px;
+
+                a {
+                    color: black !important;
+                }
             }
         }
     }
+}
+
+.black {
+    background-color: black;
 }
