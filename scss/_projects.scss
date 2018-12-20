@@ -8,29 +8,24 @@
 
     h1 {
         @include h1-properties;
-    }
 
-    .git {
-        font-size: 30px;
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: 40px;
+        &:nth-of-type(2) {
+            font-size: 35px;
 
             i {
-                &::before {
-                    font-family: 'Font Awesome 5 Free';
-                }
+                color: black;
+                padding-left: 20px;
             }
         }
     }
+
+
 
     .container {
 
 
         .row {
-            //test
+
 
             .project-div {
                 height: 40vh;
@@ -93,6 +88,24 @@
 
             }
 
+        }
+    }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 25vh;
+
+                    .description {
+                        h1 {
+                            top: -10%;
+                        }
+                    }
+                }
+            }
         }
     }
 }

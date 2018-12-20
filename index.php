@@ -36,7 +36,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top navigation">
   <a class="navbar-brand" href="#">
     <img src="prof.png" alt="Logo haqz">Haqz
   </a>
@@ -49,13 +49,13 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#about-sec">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="#blog-sec">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
+        <a class="nav-link" href="#projects-sec">Projects</a>
       </li>
     </ul>
   </div>
@@ -70,7 +70,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
   <!-- ABOUT SECTION -->
 
-  <section class="about">
+  <section class="about" id="about-sec">
     <div class="about-content">
       <h1>About</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae culpa ipsam optio vel nostrum,
@@ -82,7 +82,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
   <!-- BLOG SECTION -->
 
-  <section class="blog">
+  <section class="blog" id="blog-sec">
     <h1>Recent blog entries</h1>
     <div class="container">
       <div class="row">
@@ -124,7 +124,7 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
   <!-- PROJECTS SECTION -->
 
-  <section class="projects">
+  <section class="projects" id="projects-sec">
     <h1>My projects</h1>
     <div class="container">
       <div class="row">
@@ -160,60 +160,17 @@ echo "<style>".$scss->compile('@import "main.scss"')."</style>";
         </div>
       </div>
     </div>
-    <h1>Check more on github<a href=""><i class="fab fa-github"></i></a></h1>
+    <h1>Check more on github<a href="https://github.com/Haqz" target="blank"><i class="fab fa-github"></i></a></h1>
   </section>
-  <!-- <div id="Sidebar" class="column">
-    <div class="aboutSmall">
-      <img src="prof.png" alt="Tu bedzie zjędzie" class="prof"/>
-      <p class="name">Haqz</p>
-      <p class="underName">The creator</p>
-    </div>
-    <ul class="list">
-      <li><a href="" class="a">About</a></li>
-      <li><a href="" class="a">Projects</a></li>
-      <li><a href="" class="a">Blog</a></li>
-    </ul>
-    <p class="copyright">@Copyright 2018 by Haqz</p>
-  </div> -->
-<!-- <div class="container">
-  <h2 class="indexHeader" >Recent on blog</h2>
-  <div id="Posts" class="Posts">
-   -->
-    
-
-  <!-- </div> -->
-  
-  <!-- <h2 class="indexHeader">Recent projects</h2> -->
-  <!-- <div id="Projects">
-    <a href="" class="post">
-                  <div>
-                      <p class="title">'Lorem ipsum'</p>
-                      <p class="content">'.$row['message'].'</p>
-                      <p class="time">'.$time.'</p>
-                  </div>
-              </a>
-              <a href="" class="post">
-                  <div>
-                      <p class="title">'Lorem ipsum'</p>
-                      <p class="content">'.$row['message'].'</p>
-                      <p class="time">'.$time.'</p>
-                  </div>
-              </a>
-              <a href="" class="post">
-                  <div>
-                      <p class="title">'Lorem ipsum'</p>
-                      <p class="content">'.$row['message'].'</p>
-                      <p class="time">'.$time.'</p>
-                  </div>
-              </a>
-    </div>
-  </div> -->
   </main>
         
       <!-- FOOTER -->
 
   <footer>
-    <h1>Contact me with:<a href=""><i class="fab fa-github"></i></a><i class="fas fa-at"></i></h1>
+    <div class="footer-content">
+      <h1>Contact me with:</h1>
+        <i class="fas fa-at">example@gmail.com</i>
+    </div>
   </footer>
   <!-- BOOTSTRAP FILES -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

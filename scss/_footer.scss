@@ -5,9 +5,14 @@ footer {
     height: 10vh;
     clear: both;
     background-color: #3ae374;
+    position: relative;
 
-    h1 {
-        font-size: $h1-font-size;
-        text-align: center;
+    .footer-content {
+        @include center-transform;
+
+        h1 {
+            font-size: 50px;
+        }
     }
+
 }
