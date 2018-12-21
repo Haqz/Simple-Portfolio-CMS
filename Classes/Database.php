@@ -64,7 +64,7 @@ class Database
         try{
             $sql = "SELECT * FROM $table";
             $stmt = $this->db->query($sql);
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if (!$row) {
                 throw new Exception('No row found');
             }

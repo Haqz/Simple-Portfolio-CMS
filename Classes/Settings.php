@@ -1,4 +1,5 @@
 <?php
+namespace SPC;
 /**
  * MyClass File Doc Comment
  *
@@ -8,7 +9,6 @@
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/Haqz/Simple-Portoflio-CMS
  */
-namespace SPC;
 class Settings
 {
 
