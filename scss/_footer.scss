@@ -12,7 +12,86 @@ footer {
 
         h1 {
             font-size: 50px;
+            width: 100%;
         }
     }
 
+}
+
+@media (max-width: 1024px) {
+    footer {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 640px) {
+    footer {
+        height: 60vh;
+
+        .footer-content {
+            h1 {
+                font-size: 30px;
+
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    footer {
+        height: 70vh;
+
+        .footer-content {
+            h1 {
+                font-size: 20px;
+
+            }
+        }
+    }
+}
+
+
+
+//LANDSCAPE
+@media (max-width: 1024px) and (orientation: landscape) {
+    footer {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    footer {
+        height: 110vh;
+
+        .footer-content {
+
+
+            h1 {
+                font-size: 35px;
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) and (orientation: landscape) and (max-height: 320px) {
+    footer {
+        height: 130vh;
+
+        .footer-content {
+
+
+            h1 {
+                font-size: 35px;
+
+            }
+        }
+    }
 }
