@@ -86,6 +86,17 @@
     }
 }
 
+@media (max-width: 768px) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 40vh;
+                }
+            }
+        }
+    }
+}
 
 
 @media (max-width: 500px) {
