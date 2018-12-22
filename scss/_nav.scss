@@ -6,12 +6,23 @@
     position: fixed;
     width: 100%;
 
+    &.active {
+        background-color: rgba(0, 0, 0, .8) !important;
+
+    }
+
     a {
 
         img {
             border-radius: 50%;
             width: 70px;
             margin-right: 10px;
+        }
+
+        span {
+            &.span-active {
+                color: white;
+            }
         }
     }
 
@@ -25,12 +36,12 @@
 
                 a {
                     color: black !important;
+
+                    &.active-a {
+                        color: white !important;
+                    }
                 }
             }
         }
     }
-}
-
-.black {
-    background-color: black;
 }

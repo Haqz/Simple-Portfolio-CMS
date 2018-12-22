@@ -38,9 +38,9 @@ try{
   ?>
 </head>
 <body>
-<nav class="navigation navbar navbar-expand-lg navbar-light bg-light sticky-top navigation" id="navbar">
+<nav class="navigation navbar navbar-expand-lg navbar-light bg-light sticky-top navigation">
   <a class="navbar-brand" href="#">
-    <img src="prof.png" alt="Logo haqz">Haqz
+    <img src="prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -171,7 +171,21 @@ try{
   <footer>
     <div class="footer-content">
       <h1>Contact me with:</h1>
-        <i class="fas fa-at">example@gmail.com</i>
+        <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Title</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter title">
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Message</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
     </div>
   </footer>
   <!-- BOOTSTRAP FILES -->
