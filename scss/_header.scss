@@ -21,3 +21,73 @@ header {
         }
     }
 }
+
+
+
+@media (max-width: 768px) {
+    header {
+        .text {
+
+
+
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        .text {
+            left: 10%;
+            color: white;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+//LANDSCAPE 
+@media (max-width: 1024px) and (orientation: landscape) {
+    header {
+        .text {
+            text-align: right;
+
+            h1 {
+                font-size: 60px;
+            }
+
+            p {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    header {
+        .text {
+            text-align: right;
+            color: white;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}

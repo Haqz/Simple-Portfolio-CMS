@@ -2,7 +2,7 @@ const navbar = document.querySelector('.navigation');
 const listItem = document.querySelectorAll('.nav-link');
 const navSpan = document.querySelector('#nav-span');
 window.addEventListener('scroll', function (e) {
-    const lastPosition = window.scrollY
+    const lastPosition = window.scrollY;
     if (lastPosition > 50) {
         navbar.classList.add('active');
         listItem.classList.add('active-a');
@@ -16,4 +16,4 @@ window.addEventListener('scroll', function (e) {
         listItem.classList.remove('active-a');
         navSpan.classList.remove('span-active');
     }
-})
+});

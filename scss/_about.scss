@@ -103,13 +103,14 @@
     }
 }
 
-@media (max-width: 820px) and (orientation: landscape) {
+@media (max-width: 850px) and (orientation: landscape) {
     .about {
         height: 90vh;
 
         .about-content {
             h1 {
                 font-size: 40px;
+                margin: 0;
             }
 
             p {
@@ -121,6 +122,34 @@
 
 @media (max-width: 768px) and (orientation: landscape) {
     .about {
-        height: 70vh;
+        height: 80vh;
+
+        .about-content {
+            h1 {
+                font-size: 35px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .about {
+        height: 90vh;
+
+        .about-content {
+            h1 {
+                font-size: 35px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
     }
 }
