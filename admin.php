@@ -18,21 +18,22 @@ if ($_POST['login']) {
 }
 function printSite($id) 
 {
+    global $settings;
     switch($id){
-        case 1:
+    case 1:
             echo '
             <form method="post">
         <input type="text" name="title" required>
         <input type="text" name="content" required>
         <input type="submit" name="submit">
-      </form>';
-            break;
-        case 2:
-            echo 'no elo';
-            break;
-        default:
-            echo 'heji';
-            break;
+        </form>';
+        break;
+    case 2:
+        echo "<textarea rows='4' cols='50' name='css'>". $settings->readStyleFile() ." </textarea>";
+        break;
+    default:
+        echo 'heji';
+        break;
     }
 }
     $get = $_GET['site'];

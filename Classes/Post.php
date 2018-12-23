@@ -1,4 +1,5 @@
 <?php
+namespace SPC;
 /**
  * MyClass File Doc Comment
  *

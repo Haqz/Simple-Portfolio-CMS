@@ -1,4 +1,5 @@
 <?php
+
 /**
  * SCSS compiler written in PHP
  *

@@ -1,4 +1,7 @@
 <?php
+namespace SPC;
+
+use PDO;
 /**
  * MyClass File Doc Comment
  *
@@ -17,8 +20,8 @@ class Database
      */
     public function __construct($file = 'messaging.sqlite3')
     {
-        $this->db = new PDO('sqlite:./'.$file);
-        $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $this->db = new \PDO('sqlite:./'.$file);
+        $this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     } 
     /**
      * Destruct database
@@ -61,7 +64,7 @@ class Database
         try{
             $sql = "SELECT * FROM $table";
             $stmt = $this->db->query($sql);
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $row = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if (!$row) {
                 throw new Exception('No row found');
             }

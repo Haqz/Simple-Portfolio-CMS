@@ -1,4 +1,5 @@
 <?php
+namespace SPC;
 /**
  * MyClass File Doc Comment
  *
@@ -8,7 +9,6 @@
  * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
  * @link     https://github.com/Haqz/Simple-Portoflio-CMS
  */
-
 class Settings
 {
 
@@ -25,9 +25,6 @@ class Settings
 
         $settings = $this->db->getAll('settings');
 
-
-        $this->name = $settings['name'];
-        $this->author = $settings['author'];
         $this->style = $style;
     } 
     /**
@@ -62,13 +59,30 @@ class Settings
      * 
      * @return string
      */
-    public function getStyleFile($file = "tmp/main.uwu")
+    public function readStyleFile($file = "tmp/main.uwu")
     {
-        $myfile = fopen($file, "r");
+        $myfile = fopen($file, "r+");
         if ($myfile == null) {
             return false; 
         }
         return fread($myfile, filesize($file));
+        fclose($myfile);
+    }
+    /**
+     * Write custom css file content
+     * 
+     * @param string $data Custom style data
+     * @param string $file Custom style file
+     * 
+     * @return string
+     */
+    public function writeStyleFile($data, $file = "tmp/main.uwu")
+    {
+        $myfile = fopen($file, "w+");
+        if ($myfile == null) {
+            Throw new Exception('File not found'); 
+        }
+        fwrite($myfile, $data);
         fclose($myfile);
     }
     /*
@@ -103,4 +117,5 @@ class Settings
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
     }
+    
 }

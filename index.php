@@ -1,11 +1,13 @@
 <?php
 require './bbcode.php';
+require 'vendor/autoload.php';
 require 'Classes/Autoloader.php';
 try{
-    $db = new Database();
-    $post = new Post($db);
-    $user = new User($db);
-    $settings = new Settings($db);
+    
+    $db = new SPC\Database();
+    $settings = new SPC\Settings($db);
+    $post = new SPC\Post($db);
+    $user = new SPC\User($db);
     $scss = new scssc;
 }catch(Exception $e){
     echo $e->getMessage();
@@ -30,10 +32,6 @@ try{
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <?php 
     $scss->setImportPaths("scss/");
-    $scss->setVariables(
-        array(
-          'background' => $settings->getStyleClass("background"))
-    );
     echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   ?>
   
