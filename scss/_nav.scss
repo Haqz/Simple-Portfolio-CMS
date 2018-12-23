@@ -1,22 +1,50 @@
 @import '_mixin.scss';
 @import '_variables.scss';
 
-nav {
-    background-color: transparent;
+.navigation {
+    background-color: transparent !important;
+    position: fixed;
+    width: 100%;
+    transition: .3s all;
+
+    &.active {
+        background-color: rgba(0, 0, 0, .8) !important;
+
+    }
 
     a {
+
         img {
             border-radius: 50%;
-            width: 40px;
+            width: 70px;
             margin-right: 10px;
+        }
+
+        span {
+            transition: .3s all;
+
+            &.span-active {
+                color: white;
+            }
         }
     }
 
     div {
+
+
         ul {
             li {
                 margin: 0 30px;
-                font-size: 20px;
+                font-size: 25px;
+
+                a {
+                    color: black !important;
+                    transition: .3s all;
+
+                    &.active-a {
+                        color: white !important;
+                    }
+                }
             }
         }
     }

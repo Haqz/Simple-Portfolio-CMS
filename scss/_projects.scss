@@ -8,23 +8,18 @@
 
     h1 {
         @include h1-properties;
-    }
 
-    .git {
-        font-size: 30px;
-
-        a {
-            text-decoration: none;
-            color: black;
-            font-size: 40px;
+        &:nth-of-type(2) {
+            font-size: 35px;
 
             i {
-                &::before {
-                    font-family: 'Font Awesome 5 Free';
-                }
+                color: black;
+                padding-left: 20px;
             }
         }
     }
+
+
 
     .container {
 
@@ -58,11 +53,6 @@
                         top: -5%;
 
                         font-size: 30px;
-
-                        @media (max-width: 360px) {
-                            font-size: 20px;
-                            top: -20%;
-                        }
                     }
 
                     a {
@@ -93,6 +83,213 @@
 
             }
 
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 25vh;
+
+                    .description {
+                        h1 {
+                            top: -10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 35vh;
+
+                    .description {
+                        h1 {
+                            top: -10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 45vh;
+
+                    .description {
+                        h1 {
+                            top: -10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 45vh;
+
+                    .description {
+                        h1 {
+                            top: -15%;
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// LANDSCAPE
+@media (max-width: 1024px) and (orientation: landscape) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 40vh;
+
+                    .description {
+
+
+                        h1 {
+                            top: -15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 823px) and (orientation: landscape) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 70vh;
+                    width: 35vw;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+
+                    .description {
+                        h1 {
+                            top: -20%;
+                            font-size: 25px;
+                        }
+
+                        a {
+                            button {
+                                padding: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 736px) and (orientation: landscape) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 70vh;
+                    width: 50vw;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+
+                    .description {
+                        h1 {
+                            top: -10%;
+                            font-size: 25px;
+                        }
+
+                        a {
+                            button {
+                                padding: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 70vh;
+                    width: 50vw;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+
+                    .description {
+                        h1 {
+                            top: -15%;
+                            font-size: 25px;
+                        }
+
+                        a {
+                            button {
+                                padding: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 568px) and (orientation: landscape) {
+    .projects {
+        .container {
+            .row {
+                .project-div {
+                    height: 70vh;
+                    width: 50vw;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+
+                    .description {
+                        h1 {
+                            top: -20%;
+                            font-size: 20px;
+                        }
+
+                        a {
+                            button {
+                                padding: 1px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

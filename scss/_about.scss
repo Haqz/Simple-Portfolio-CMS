@@ -2,7 +2,7 @@
 @import '_variables.scss';
 
 .about {
-    padding: 20px;
+
     height: 50vh;
     position: relative;
     background-color: #ff3838;
@@ -16,8 +16,140 @@
 
         p {
             text-align: justify;
-            font-size: 20px;
+            font-size: 25px;
         }
     }
 
+}
+
+// MEDIA FOR PORTRAIT
+@media (max-width: 1024px) {
+    .about {
+        height: 55vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        .about-content {
+            h1 {
+                font-size: 50px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .about {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 425px) and (orientation: portrait) {
+    .about {
+        height: 50vh;
+
+        .about-content {
+            h1 {
+                font-size: 40px;
+                padding: 10px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) and (orientation: portrait) {
+    .about {
+        .about-content {
+            h1 {
+                font-size: 30px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+    .about {
+        .about-content {
+            h1 {
+                font-size: 20px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+//MEDIA FOR LANDSCAPE
+@media (max-width: 1024px) and (orientation: landscape) {
+    .about {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    .about {
+        height: 90vh;
+
+        .about-content {
+            h1 {
+                font-size: 40px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .about {
+        height: 80vh;
+
+        .about-content {
+            h1 {
+                font-size: 35px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .about {
+        height: 90vh;
+
+        .about-content {
+            h1 {
+                font-size: 35px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
 }

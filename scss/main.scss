@@ -14,10 +14,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 main {
     width: 100%;
     margin: 0 auto;
+}
+
+.black {
+    background-color: black;
 }
 
 // body {

@@ -66,28 +66,99 @@
                         }
                     }
 
-                    .first {}
 
-                    // .second {
-                    //     @include div-for-blog;
 
-                    //     img {
-                    //         transition: $transition-for-blog;
+                }
+            }
+        }
+    }
+}
 
-                    //     }
+@media (max-width: 1024px) and (orientation: portrait) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 30vh;
+                }
+            }
+        }
+    }
+}
 
-                    //     h1 {
-                    //         @include h1-for-blog;
-                    //     }
+@media (max-width: 768px) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 40vh;
+                }
+            }
+        }
+    }
+}
 
-                    //     p {
-                    //         font-size: $p-blog-font-size;
-                    //     }
 
-                    //     &:hover img {
-                    //         transform: scale(1.2);
-                    //     }
-                    // }
+@media (max-width: 500px) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 50vh;
+                }
+            }
+        }
+    }
+}
+
+//LANDSCAPE
+@media (max-width: 1024px) and (orientation: landscape) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 40vh;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 80vh;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 40vh;
+                    width: 50vw;
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .blog {
+        .container {
+            .row {
+                div {
+                    height: 80vh;
                 }
             }
         }

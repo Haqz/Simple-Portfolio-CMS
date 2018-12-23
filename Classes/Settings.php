@@ -25,9 +25,6 @@ class Settings
 
         $settings = $this->db->getAll('settings');
 
-
-        $this->name = $settings['name'];
-        $this->author = $settings['author'];
         $this->style = $style;
     } 
     /**
