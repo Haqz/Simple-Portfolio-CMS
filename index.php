@@ -36,6 +36,7 @@ try{
     );
     echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   ?>
+  
 </head>
 <body>
 <nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top navigation">
