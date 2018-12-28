@@ -10,16 +10,10 @@ window.addEventListener('scroll', function (e) {
             e.classList.add('active-a');
         });
         navSpan.classList.add('span-active');
-    } else if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        listItem.forEach(function (e) {
-            e.classList.remove('active-a');
-        });
-        navSpan.classList.remove('span-active');
     } else {
         navbar.classList.remove('active');
         listItem.forEach(function (e) {
-            e.classList.rempve('active-a');
+            e.classList.remove('active-a');
         });
         navSpan.classList.remove('span-active');
     }
