@@ -9,11 +9,17 @@ window.addEventListener('scroll', function (e) {
         listItem.forEach(function (e) {
             e.classList.add('active-a');
         });
+        listItem.forEach(function (e) {
+            navbar.classList.add('active-border');
+        });
         navSpan.classList.add('span-active');
     } else {
         navbar.classList.remove('active');
         listItem.forEach(function (e) {
             e.classList.remove('active-a');
+        });
+        listItem.forEach(function (e) {
+            navbar.classList.remove('active-border');
         });
         navSpan.classList.remove('span-active');
     }
