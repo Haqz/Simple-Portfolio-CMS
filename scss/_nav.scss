@@ -8,9 +8,19 @@
     transition: .3s all;
 
     &.active-border {
+        a {
+            img {
+                width: 50px;
+            }
+        }
+
         div {
             ul {
+
+
                 li {
+                    font-size: 20px;
+
                     a {
                         &::before {
                             border-color: white;
@@ -33,6 +43,7 @@
             border-radius: 50%;
             width: 70px;
             margin-right: 10px;
+            transition: .3s all;
         }
 
         span {
@@ -70,7 +81,7 @@
                         left: 0;
                         width: 0;
                         border-bottom: 2px solid black;
-                        transition: .2s all;
+                        transition: width .4s cubic-bezier(.68, -0.55, .27, 1.55);
                     }
 
                     &:hover::before {

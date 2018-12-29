@@ -2,7 +2,9 @@
 @import '_variables.scss';
 
 .blog {
-    background-color: #c56cf0;
+    background: url(asets/images/blog-bgc.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     padding: 80px 0;
 
@@ -50,15 +52,13 @@
                                 @include p-for-blog;
                             }
 
-                            // button {
-                            //     @include button-for-blog;
-                            //     transition: .2s all;
+                            p:nth-of-type(2) {
+                                @include p-for-blog;
+                                position: absolute;
+                                top: 80%;
+                            }
 
-                            //     &:hover {
-                            //         background-color: white;
-                            //         color: black;
-                            //     }
-                            // }
+
                         }
 
                         &:hover .overlay {

@@ -5,7 +5,7 @@
 
     height: 50vh;
     position: relative;
-    background-color: #ff3838;
+    background: linear-gradient(to right, rgb(128, 128, 128), rgb(63, 173, 168));
 
     .about-content {
         @include center-transform;
