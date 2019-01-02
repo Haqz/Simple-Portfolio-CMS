@@ -40,7 +40,7 @@ echo "<style>".$scss->compile('@import "article.scss"')."</style>";
 <body>
 <nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand">
-    <img src="prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
+    <img src="asets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="menu-btn navbar-toggler-icon"></span>
@@ -69,7 +69,32 @@ echo "<style>".$scss->compile('@import "article.scss"')."</style>";
   </div>
 </header>
 <main>
-    
+    <section class="blog-section">
+      <div class="blog-post">
+        <h1>Początki programowania z php</h1>
+        <p>Data 2019-01-02</p>
+        <div class="blog-image">
+          
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae a iste tenetur iusto officiis debitis accusantium dicta magni labore dolorum accusamus sunt laudantium alias expedita molestias consequatur, ipsam adipisci ab unde? Quidem doloremque non minus obcaecati placeat, deleniti libero! Sit commodi, possimus quisquam vel obcaecati beatae hic quia rerum nemo asperiores quod ea, amet soluta deserunt consequatur maiores dolores veniam nihil, ab totam. Rem officiis vel distinctio doloremque a debitis dicta inventore porro repellendus ipsum blanditiis consectetur, amet voluptatem similique exercitationem quisquam! Modi earum hic, velit optio veniam consequuntur, enim eaque maiores eius ullam, eligendi blanditiis explicabo nostrum sint laboriosam!</p>
+      </div>
+      <div class="latest-post-section">
+        <div class="latest-post">
+          <h1>Latest Posts</h1>
+          <ul>
+            <li><a href="#" target="_blank">Poczatki PHP</a></li>
+            <li><a href="#" target="_blank">Poczatki PHP</a></li>
+            <li><a href="#" target="_blank">Poczatki PHP</a></li>
+            <li><a href="#" target="_blank">Poczatki PHP</a></li>
+            <li><a href="#" target="_blank">Poczatki PHP</a></li>
+          </ul>
+        </div>
+        <div class="tags-post">
+          <h1>Tags</h1>
+          <p>#php, #php, #php, #php, #php, #php, #php,</p>
+        </div>
+      </div>
+    </section>
 </main>
         
       <!-- FOOTER -->

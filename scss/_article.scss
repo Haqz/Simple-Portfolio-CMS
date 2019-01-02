@@ -1,2 +1,89 @@
 @import '_mixin.scss';
 @import '_variables.scss';
+
+.blog-section {
+    height: 100vh;
+    background-color: rgb(19, 99, 190);
+    display: flex;
+    padding: 30px;
+    color: white;
+
+    .blog-post {
+        width: 70%;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            padding: 15px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+
+        .blog-image {
+            height: 30vh;
+            width: 100%;
+            background: url(asets/images/blog-image.jpg) no-repeat center;
+            background-size: cover;
+        }
+    }
+
+    .latest-post-section {
+        width: 30%;
+        position: relative;
+
+        .latest-post {
+            width: 80%;
+            @include center-transform;
+            top: 30%;
+            background-color: rgb(167, 161, 161);
+
+            h1 {
+                background-color: rgb(75, 71, 71);
+                padding: 20px;
+                font-size: 35px;
+            }
+
+            ul {
+                list-style: none;
+                width: 100%;
+
+                li {
+                    padding: 15px;
+                    border-bottom: 2px solid rgb(75, 71, 71);
+
+
+
+                    &:last-child {
+                        border: none;
+                        padding-bottom: 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        width: 100%;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .tags-post {
+            @include center-transform;
+            top: 65%;
+            width: 80%;
+            background-color: rgb(167, 161, 161);
+
+            h1 {
+                background-color: rgb(75, 71, 71);
+                padding: 20px;
+                font-size: 35px;
+            }
+
+            p {
+                padding: 15px;
+            }
+        }
+    }
+}
