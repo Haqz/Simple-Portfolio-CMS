@@ -4,8 +4,9 @@
 footer {
     height: 50vh;
     clear: both;
-    background: linear-gradient(to top, rgb(239, 239, 187), rgb(212, 211, 221));
+    background-color: #292525;
     position: relative;
+    color: white;
 
     .footer-content {
         @include center-transform;

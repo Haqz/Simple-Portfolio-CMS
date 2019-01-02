@@ -7,7 +7,9 @@
     width: 100%;
     transition: .3s all;
 
-    &.active-border {
+    &.active {
+        background-color: rgba(0, 0, 0, .8) !important;
+
         a {
             img {
                 width: 50px;
@@ -31,11 +33,6 @@
         }
     }
 
-    &.active {
-        background-color: rgba(0, 0, 0, .8) !important;
-
-    }
-
     a {
 
 
@@ -47,12 +44,8 @@
         }
 
         span {
-            color: black !important;
+            color: white !important;
             transition: .3s all;
-
-            &.span-active {
-                color: white !important;
-            }
         }
     }
 
@@ -70,7 +63,7 @@
 
 
                 a {
-                    color: black !important;
+                    color: white !important;
                     transition: .3s all;
                     position: relative;
 
@@ -80,7 +73,7 @@
                         bottom: 0;
                         left: 0;
                         width: 0;
-                        border-bottom: 2px solid black;
+                        border-bottom: 2px solid white;
                         transition: width .4s cubic-bezier(.68, -0.55, .27, 1.55);
                     }
 
@@ -88,9 +81,9 @@
                         width: 100%;
                     }
 
-                    &.active-a {
-                        color: white !important;
-                    }
+                    // &.active-a {
+                    //     color: white !important;
+                    // }
 
                 }
             }

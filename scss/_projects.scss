@@ -2,9 +2,10 @@
 @import '_variables.scss';
 
 .projects {
-    background: linear-gradient(to bottom, rgb(117, 127, 154), rgb(212, 211, 221));
+    background-color: #3b3939;
     padding: 80px 0 25px;
     text-align: center;
+    color: white;
 
     h1 {
         @include h1-properties;
@@ -14,7 +15,7 @@
             font-size: 35px;
 
             i {
-                color: black;
+                color: white;
                 padding-left: 20px;
             }
         }
@@ -34,7 +35,7 @@
                 background: url(asets/images/project1.jpg) center no-repeat;
                 background-size: cover;
                 border-radius: 10px;
-                box-shadow: 0 0 50px gray;
+                box-shadow: 0 0 50px #1a1818;
                 position: relative;
                 overflow: hidden;
 

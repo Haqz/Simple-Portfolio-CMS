@@ -39,7 +39,7 @@ try{
 <body>
 <nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand">
-    <img src="prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
+    <img src="asets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="menu-btn navbar-toggler-icon"></span>

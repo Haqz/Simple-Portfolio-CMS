@@ -2,11 +2,10 @@
 @import '_variables.scss';
 
 .blog {
-    background: url(asets/images/blog-bgc.jpg);
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: rgb(19, 99, 190);
     margin: 0;
     padding: 80px 0;
+    color: white;
 
     h1 {
         @include h1-properties;
