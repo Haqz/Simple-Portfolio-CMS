@@ -1,5 +1,4 @@
 <?php
-require './bbcode.php';
 require 'vendor/autoload.php';
 require 'Classes/Autoloader.php';
 try{

@@ -1,5 +1,5 @@
 <?php
-
+namespace SPC;
 /**
  * SCSS compiler written in PHP
  *
