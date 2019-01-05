@@ -4,6 +4,7 @@
 @import '_blog.scss';
 @import '_projects.scss';
 @import '_footer.scss';
+@import '_article.scss';
 
 //https://flatuicolors.com/palette/tr
 *,
@@ -21,10 +22,6 @@ html {
 main {
     width: 100%;
     margin: 0 auto;
-}
-
-.black {
-    background-color: black;
 }
 
 // body {

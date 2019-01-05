@@ -4,8 +4,9 @@
 footer {
     height: 50vh;
     clear: both;
-    background-color: #3ae374;
+    background-color: #292525;
     position: relative;
+    color: white;
 
     .footer-content {
         @include center-transform;

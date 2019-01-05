@@ -10,23 +10,47 @@
     &.active {
         background-color: rgba(0, 0, 0, .8) !important;
 
+        a {
+            img {
+                width: 50px;
+            }
+        }
+
+        div {
+            ul {
+
+
+                li {
+                    font-size: 20px;
+
+                    a {
+                        &::before {
+                            border-color: white;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     a {
+
 
         img {
             border-radius: 50%;
             width: 70px;
             margin-right: 10px;
+            transition: .3s all;
         }
 
         span {
+            color: white !important;
             transition: .3s all;
-
-            &.span-active {
-                color: white;
-            }
         }
+    }
+
+    button {
+        color: black !important;
     }
 
     div {
@@ -37,15 +61,40 @@
                 margin: 0 30px;
                 font-size: 25px;
 
-                a {
-                    color: black !important;
-                    transition: .3s all;
 
-                    &.active-a {
-                        color: white !important;
+                a {
+                    color: white !important;
+                    transition: .3s all;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 0;
+                        border-bottom: 2px solid white;
+                        transition: width .4s cubic-bezier(.68, -0.55, .27, 1.55);
                     }
+
+                    &:hover::before {
+                        width: 100%;
+                    }
+
+                    // &.active-a {
+                    //     color: white !important;
+                    // }
+
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navigation {
+        button {
+            background-color: rgba(0, 0, 0, .2);
         }
     }
 }
