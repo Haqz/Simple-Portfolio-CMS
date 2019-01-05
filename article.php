@@ -4,16 +4,14 @@ require 'vendor/autoload.php';
 require 'Classes/Autoloader.php';
 try{
     
-    $db = new SPC\Database();
-    $settings = new SPC\Settings($db);
-    $post = new SPC\Post($db);
-    $user = new SPC\User($db);
-    $scss = new scssc;
+  $db = new SPC\Database();
+  $settings = new SPC\Settings($db);
+  $post = new SPC\Post($db);
+  $user = new SPC\User($db);
+  $scss = new scssc;
 }catch(Exception $e){
-    echo $e->getMessage();
+  echo $e->getMessage();
 }
-$scss->setImportPaths("scss/");
-echo "<style>".$scss->compile('@import "article.scss"')."</style>";
 
 
 //print_r($post->findPostData($_GET['id']));
@@ -32,7 +30,9 @@ echo "<style>".$scss->compile('@import "article.scss"')."</style>";
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <?php 
-    $scss->setImportPaths("scss/");
+    $scss->setImportPaths("Style/scss/");
+    
+echo "<style>".$scss->compile('@import "article.scss"')."</style>";
     echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   ?>
   
@@ -40,7 +40,7 @@ echo "<style>".$scss->compile('@import "article.scss"')."</style>";
 <body>
 <nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand">
-    <img src="asets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
+    <img src="Assets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="menu-btn navbar-toggler-icon"></span>

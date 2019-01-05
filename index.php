@@ -30,7 +30,7 @@ try{
   <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <?php 
-    $scss->setImportPaths("scss/");
+    $scss->setImportPaths("Style/scss/");
     echo "<style>".$scss->compile('@import "main.scss"')."</style>";
   ?>
   
@@ -38,7 +38,7 @@ try{
 <body>
 <nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <a class="navbar-brand">
-    <img src="asets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
+    <img src="Assets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="menu-btn navbar-toggler-icon"></span>
@@ -94,7 +94,7 @@ try{
             <div class='col-md-6 col-lg-4'>
             <a href='article?id=".$row['id']."'>
               <div class='first blog-div'>
-                <img src='asets/images/blog1.jpg' alt=''>
+                <img src='Assets/images/blog1.jpg' alt=''>
                 <h1>".htmlspecialchars($row['title'])."</h1>
                 <p>Lorem Ipsum</p>
                 <div class='overlay'>
@@ -108,7 +108,7 @@ try{
         <div class='col-md-6 col-lg-4'>
             <a href="#">
               <div class='first blog-div'>
-                <img src='asets/images/blog1.jpg' alt=''>
+                <img src='Assets/images/blog1.jpg' alt=''>
                 <h1>Tu testuj Raloseq(animacja do)</h1>
                 <div class="overlay">
                   <p>Początki programowania w php</p>
