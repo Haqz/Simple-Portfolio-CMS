@@ -34,7 +34,7 @@
    <body>
       <nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
          <a class="navbar-brand">
-         <img src="asets/images/prof.png" alt="Logo haqz"><span id="nav-span">Haqz</span>
+         <img src="asets/images/prof.png" alt="Logo haqz"><span>Haqz</span>
          </a>
          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
          <span class="menu-btn navbar-toggler-icon"></span>
@@ -118,7 +118,7 @@
             <h1>My projects</h1>
             <div class="container">
                <div class="row">
-                  <div class="col-md-6 col-lg-4">
+                  <div class="col-md-6 col-lg-4 slide-in">
                      <div class='first project-div'>
                         <div class="description">
                            <h1>Pierwszy projekt</h1>
@@ -128,7 +128,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-6 col-lg-4">
+                  <div class="col-md-6 col-lg-4 slide-in">
                      <div class='first project-div'>
                         <div class="description">
                            <h1>Pierwszy projekt</h1>
@@ -138,7 +138,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="col-md-6 col-lg-4">
+                  <div class="col-md-6 col-lg-4 slide-in">
                      <div class='first project-div'>
                         <div class="description">
                            <h1>Pierwszy projekt</h1>
@@ -180,5 +180,6 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
       <!-- MY SCRIPTS -->
       <script src="menuscroll.js"></script>
+      <script src="slidein.js"></script>
    </body>
 </html>
