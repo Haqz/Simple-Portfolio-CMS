@@ -4,86 +4,225 @@
 .blog-section {
     height: 100vh;
     background-color: rgb(19, 99, 190);
-    display: flex;
     padding: 30px;
     color: white;
+    width: 100%;
 
-    .blog-post {
-        width: 70%;
+    .container-fluid {
 
-        h1 {
-            font-size: 50px;
-        }
+        .row {
+            .blog-post {
 
-        p {
-            padding: 15px;
-            line-height: 30px;
-            font-size: 20px;
-        }
+                h1 {
+                    font-size: 50px;
+                    background-color: rgb(46, 45, 45);
+                    padding: 20px;
+                }
 
-        .blog-image {
-            height: 30vh;
-            width: 100%;
-            background: url(asets/images/blog-image.jpg) no-repeat center;
-            background-size: cover;
-        }
-    }
+                p {
 
-    .latest-post-section {
-        width: 30%;
-        position: relative;
+                    &:nth-of-type(1),
+                    &:nth-of-type(2) {
+                        line-height: 0;
+                        padding: 15px;
 
-        .latest-post {
-            width: 80%;
-            @include center-transform;
-            top: 30%;
-            background-color: rgb(167, 161, 161);
-
-            h1 {
-                background-color: rgb(75, 71, 71);
-                padding: 20px;
-                font-size: 35px;
-            }
-
-            ul {
-                list-style: none;
-                width: 100%;
-
-                li {
-                    padding: 15px;
-                    border-bottom: 2px solid rgb(75, 71, 71);
-
-
-
-                    &:last-child {
-                        border: none;
-                        padding-bottom: 0;
                     }
 
-                    a {
-                        text-decoration: none;
+                    padding: 15px;
+                    line-height: 30px;
+                    font-size: 20px;
+                }
+
+                .blog-image {
+                    height: 30vh;
+                    width: 100%;
+                    background: url(asets/images/blog-image.jpg) no-repeat center;
+                    background-size: cover;
+                }
+            }
+
+            .latest-post-section {
+                position: relative;
+
+                .latest-post {
+                    width: 100%;
+
+
+                    background-color: rgb(46, 45, 45);
+
+                    h1 {
+                        background-color: rgb(75, 71, 71);
+                        padding: 20px;
+                        margin-bottom: 0;
+                        font-size: 35px;
+                    }
+
+                    ul {
+                        list-style: none;
                         width: 100%;
-                        color: white;
+
+                        li {
+                            padding: 15px;
+                            border-bottom: 2px solid rgb(75, 71, 71);
+
+
+
+                            &:last-child {
+                                border: none;
+
+                            }
+
+                            a {
+                                text-decoration: none;
+                                width: 100%;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                .tags-post {
+                    width: 100%;
+                    background-color: rgb(46, 45, 45);
+
+                    h1 {
+                        background-color: rgb(75, 71, 71);
+                        padding: 20px;
+                        font-size: 35px;
+                    }
+
+                    p {
+                        padding: 15px;
                     }
                 }
             }
         }
+    }
+}
 
-        .tags-post {
-            @include center-transform;
-            top: 65%;
-            width: 80%;
-            background-color: rgb(167, 161, 161);
+@media (max-width: 768px) {
+    .blog-section {
+        height: 130vh;
+    }
+}
 
-            h1 {
-                background-color: rgb(75, 71, 71);
-                padding: 20px;
-                font-size: 35px;
-            }
+@media (max-width: 425px) {
+    .blog-section {
+        height: 160vh;
 
-            p {
-                padding: 15px;
+        .container-fluid {
+            .row {
+                .blog-post {
+                    h1 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 18px;
+
+                    }
+                }
             }
         }
+    }
+}
+
+@media (max-width: 424px) {
+    .blog-section {
+        height: 230vh;
+    }
+}
+
+@media (max-width: 415px) {
+    .blog-section {
+        height: 250vh;
+    }
+}
+
+@media (max-width: 415px) and (max-height: 900px) {
+    .blog-section {
+        height: 230vh;
+    }
+}
+
+@media (max-width: 415px) and (max-height: 800px) {
+    .blog-section {
+        height: 250vh;
+    }
+}
+
+@media (max-width: 375px) {
+    .blog-section {
+        height: 240vh;
+    }
+}
+
+@media (max-width: 375px) and (max-height: 800px) {
+    .blog-section {
+        height: 290vh;
+    }
+}
+
+@media (max-width: 360px) {
+    .blog-section {
+        height: 310vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .blog-section {
+        height: 340vh;
+
+        .container-fluid {
+            .row {
+                .blog-post {
+                    h1 {
+                        font-size: 25px;
+                    }
+
+                    p {
+                        font-size: 15px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+//LANDSCAPE 
+@media (max-width: 1024px) and (orientation: landscape) {
+    .blog-section {
+        height: 130vh;
+
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+    .blog-section {
+        height: 250vh;
+
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .blog-section {
+        height: 330vh;
+
+    }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+    .blog-section {
+        height: 390vh;
+
+    }
+}
+
+
+@media (max-width: 600px) and (orientation: landscape) {
+    .blog-section {
+        height: 480vh;
+
     }
 }
