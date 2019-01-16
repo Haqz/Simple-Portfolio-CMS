@@ -1,10 +1,12 @@
 <?php
+require 'vendor/autoload.php';
 require 'Classes/Autoloader.php';
 try{
-    $db = new Database();
-    $post = new Post($db);
-    $user = new User($db);
-    $settings = new Settings($db);
+    
+    $db = new SPC\Database();
+    $settings = new SPC\Settings($db);
+    $post = new SPC\Post($db);
+    $user = new SPC\User($db);
     $scss = new scssc;
 }catch(Exception $e){
     echo $e->getMessage();
