@@ -68,11 +68,10 @@ if ($_POST['submit']) {
     <script src="main.js"></script>
 </head>
 <body>
-<?php
 
-if (!$_SESSION['logged']) {
-    echo '
-    <main id="Login">
+
+
+<main id="Login">
     <div class="container">
         <div class="loginBox">
             <span style="font-size: 36px;">Login :D</span>
@@ -89,11 +88,11 @@ if (!$_SESSION['logged']) {
             </form>
         </div>
     </div>
-    </main>';
-} else {
-    echo '';
-}
-?>
+    </main>
+
+    
+
+
 <form method="post">
 <input type="submit" name="unset">
 </form>

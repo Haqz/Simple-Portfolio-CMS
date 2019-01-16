@@ -53,6 +53,9 @@
                <li class="nav-item">
                   <a class="nav-link" href="#projects-sec">Projects</a>
                </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="admin.php">Sign In</a>
+               </li>
             </ul>
          </div>
       </nav>
