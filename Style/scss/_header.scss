@@ -3,7 +3,11 @@
 
 header {
     height: 100vh;
+<<<<<<< HEAD:Style/scss/_header.scss
     background: url('Style/images/hero-image.jpg') center no-repeat;
+=======
+    background: url(Assets/images/hero-image.jpg) center no-repeat;
+>>>>>>> 3beb22acf559222d423148a6f85afd5d50c61c10:Style/scss/_header.scss
     background-size: cover;
     background-attachment: fixed;
     position: relative;
