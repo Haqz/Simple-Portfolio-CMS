@@ -50,15 +50,15 @@ class User
             $count = $result->fetchColumn(); 
             if ($count > 0) {
                 $result1 = $this->db->query("SELECT * FROM users WHERE nick='$nick'");
-                $row = $result1->fetch(PDO::FETCH_ASSOC);
+                $row = $result1->fetch(\PDO::FETCH_ASSOC);
                 if (password_verify($pass, $row['pass'])) {
                     $_SESSION['logged'] = true;
                     return true;
                 } else {
-                    Throw new Exception('Passwords dont match');
+                    Throw new \Exception('Passwords dont match');
                 }
             } else {
-                Throw new Exception('No user found');
+                Throw new \Exception('No user found');
             }
         }
     }

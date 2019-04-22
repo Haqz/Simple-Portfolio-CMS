@@ -16,9 +16,8 @@ $scss->setImportPaths("Style/scss/");
 echo "<style>".$scss->compile('@import "main.scss"')."</style>";
 
 $postsData = $post->getLatestPostsData();
-$file = basename(__FILE__, 'php');
+$file = basename(__FILE__, '.php');
 
 require __DIR__ . '/TwigBootstrap.php';
-echo $twig->render('_'.$file.'html', ['posts'=>$postsData, 'index'=>true]);
+echo $twig->render('_'.$file.'.html', ['posts'=>$postsData, 'index'=>true]);
 
-/
