@@ -36,10 +36,12 @@
                         }
 
                         img {
+                            -webkit-transition: $transition-for-blog;
                             transition: $transition-for-blog;
                         }
 
                         &:hover img {
+                            -webkit-transform: scale(1.2);
                             transform: scale(1.2);
                         }
 

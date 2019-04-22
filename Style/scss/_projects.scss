@@ -27,7 +27,22 @@
 
 
         .row {
+            .slide-in {
+                &.slide-in-project {
+                    -webkit-animation: slide .4s;
+                    animation: slide .4s;
 
+                    &:nth-of-type(2) {
+                        -webkit-animation: slide .8s;
+                        animation: slide .8s;
+                    }
+
+                    &:nth-of-type(3) {
+                        -webkit-animation: slide 1.2s;
+                        animation: slide 1.2s;
+                    }
+                }
+            }
 
             .project-div {
                 height: 40vh;
@@ -35,6 +50,7 @@
                 background: url(Assets/images/project1.jpg) center no-repeat;
                 background-size: cover;
                 border-radius: 10px;
+                -webkit-box-shadow: 0 0 50px #1a1818;
                 box-shadow: 0 0 50px #1a1818;
                 position: relative;
                 overflow: hidden;
@@ -72,7 +88,9 @@
                             background-color: transparent;
                             padding: 5px;
                             cursor: pointer;
+                            -webkit-transform: translateX(-50%);
                             transform: translateX(-50%);
+                            -webkit-transition: .3s all;
                             transition: .3s all;
 
                             &:hover {
@@ -86,6 +104,35 @@
             }
 
         }
+    }
+}
+
+// KEYFRAMES
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20%);
+        transform: translateY(20%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(20%);
+        transform: translateY(20%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 

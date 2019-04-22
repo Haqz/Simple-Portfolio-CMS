@@ -1,0 +1,33 @@
+<nav class="navigation navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand">
+    <img src="Style/images/prof.png" alt="Logo haqz"><span>Haqz</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="menu-btn navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list-left text-left" id="navbarNav">
+       <ul class="navbar-nav ml-auto">
+         {%if index == true%}
+          <li class="nav-item">
+             <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="#about-sec">About</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="#blog-sec">Blog</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="#projects-sec">Projects</a>
+          </li>
+          <li class="nav-item">
+             <a class="nav-link" href="admin.php">Sign In</a>
+          </li>
+          {%else%}
+          <li class="nav-item">
+               <a class="nav-link" href="index.php">Home</a>
+          </li>
+          {%endif%}
+       </ul>
+    </div>
+ </nav>
