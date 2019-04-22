@@ -21,3 +21,4 @@ $file = basename(__FILE__, 'php');
 require __DIR__ . '/TwigBootstrap.php';
 echo $twig->render('_'.$file.'html', ['posts'=>$postsData, 'index'=>true]);
 
+/
