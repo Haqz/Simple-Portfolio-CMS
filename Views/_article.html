@@ -3,33 +3,25 @@
    {%include '_head.html'%}
    <body>
       {%include '_nav.html'%}
-      <header>
-         <div class="text">
-            <h1>Simple Portfolio CMS</h1>
-            <p>As simple as possible</p>
-         </div>
-      </header>
       <main>
          <section class="blog-section">
             <div class="container-fluid">
                <div class="row">
                   <div class="col-md-9 col-sm-12 blog-post">
-                     <h1>Początki programowania z php</h1>
+                     <h1>{{post.title}}</h1>
                      <p>Autor: Jan Kowalski</p>
-                     <p> Data: 2019-01-02</p>
+                     <p> Data: {{post.time|date('d-m-Y')}}</p>
                      <div class="blog-image">
                      </div>
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae a iste tenetur iusto officiis debitis accusantium dicta magni labore dolorum accusamus sunt laudantium alias expedita molestias consequatur, ipsam adipisci ab unde? Quidem doloremque non minus obcaecati placeat, deleniti libero! Sit commodi, possimus quisquam vel obcaecati beatae hic quia rerum nemo asperiores quod ea, amet soluta deserunt consequatur maiores dolores veniam nihil, ab totam. Rem officiis vel distinctio doloremque a debitis dicta inventore porro repellendus ipsum blanditiis consectetur, amet voluptatem similique exercitationem quisquam! Modi earum hic, velit optio veniam consequuntur, enim eaque maiores eius ullam, eligendi blanditiis explicabo nostrum sint laboriosam!</p>
+                     <p>{{post.message}}</p>
                   </div>
                   <div class="col-md-3 col-sm-12 latest-post-section">
                      <div class="latest-post">
                         <h1>Latest Posts</h1>
                         <ul>
-                           <li><a href="#" target="_blank">Poczatki PHP</a></li>
-                           <li><a href="#" target="_blank">Poczatki PHP</a></li>
-                           <li><a href="#" target="_blank">Poczatki PHP</a></li>
-                           <li><a href="#" target="_blank">Poczatki PHP</a></li>
-                           <li><a href="#" target="_blank">Poczatki PHP</a></li>
+                           {%for row in posts%}
+                           <li><a href="article.php?id={{row.id}}" target="_blank">{{row.title|e('html')}}</a></li>
+                           {%endfor%}
                         </ul>
                      </div>
                      <div class="tags-post">
