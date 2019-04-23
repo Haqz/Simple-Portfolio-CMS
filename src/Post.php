@@ -40,7 +40,7 @@ class Post //Post model
      */
     public function insertPost($title,$message,$time)
     {
-        $sql = "INSERT INTO messages (title, message, time) VALUES (:title, :message, :time)";
+        $sql = "INSERT INTO posts (title, content, time) VALUES (:title, :message, :time)";
         $stmt = $this->db->prepare($sql);
         $stmt->execute(
             array(
@@ -61,7 +61,7 @@ class Post //Post model
      */
     public function findPostData($id)
     {
-        return $this->db->getOne($id, 'messages');
+        return $this->db->getOne($id, 'posts');
     }
     /**
      * Construct
@@ -70,7 +70,7 @@ class Post //Post model
      */
     public function getLatestPostsData()
     {
-        return $this->db->getLimited('messages');
+        return $this->db->getLimited('posts');
     }
     
 }

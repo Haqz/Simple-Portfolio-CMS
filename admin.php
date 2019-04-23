@@ -30,7 +30,8 @@ $site = $_GET['site'];
 if (!$site) {
     echo $twig->render('_'.$file.'.html');
 } else {
-    echo $twig->render('_'."$file$site".'.html');
+    $postsData = $db->getAll('posts');
+    echo $twig->render('_'."$file$site".'.html', ['posts'=>$postsData]);
 }
 if ($_POST['unset']) {
     unset($_SESSION['logged']);
