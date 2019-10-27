@@ -1,94 +1,135 @@
 <!DOCTYPE html>
 <html>
-    {%include '_head.html'%}
-    <body>
-        {%include '_nav.html'%}
-        <header>
-            <div class="text">
-                <h1>Simple Portfolio CMS</h1>
-                <p>As simple as possible</p>
-            </div>
-        </header>
-        <main>
-            <!-- ABOUT SECTION -->
-            <section class="about" id="about-sec">
-                <div class="about-content">
-                    <h1>About</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae culpa ipsam optio vel nostrum,
-                    quos facere cumque blanditiis sed sequi accusamus, soluta corporis vitae provident! 
-                    Voluptatibus repellat porro quaerat, eum optio dignissimos deleniti consequuntur velit architecto harum. 
-                    Veniam possimus quos fugit ducimus, eos ab impedit fugiat in debitis error.
-                    </p>
-                </div>
-            </section>
-            <!-- BLOG SECTION -->
-            <section class="blog" id="blog-sec">
-                <h1>Recent blog entries</h1>
+{%include '_head.html'%}
+
+<body>
+    {%include '_nav.html'%}
+    <header>
+        <div class="text">
+            <h1>Haqz</h1>
+            <p>Programista, designer i tester!</p>
+        </div>
+    </header>
+    <main>
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about-sec">
+            <div class="about-content">
+                <h1>About</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum repudiandae culpa ipsam optio vel nostrum, quos facere cumque blanditiis sed sequi accusamus, soluta corporis vitae provident! Voluptatibus repellat porro quaerat, eum optio
+                    dignissimos deleniti consequuntur velit architecto harum. Veniam possimus quos fugit ducimus, eos ab impedit fugiat in debitis error.
+                </p>
                 <div class="container">
                     <div class="row">
-                        {%for row in posts%}
-                            <div class='col-md-6 col-lg-4'>
-                                <a href='article?id={{row.id}}'>
-                                    <div class='first blog-div'>
-                                        <img src='Style/images/blog1.jpg' alt=''>
-                                        <h1>{{row.title|e('html')}}</h1>
-                                        <p>Lorem Ipsum</p>
-                                        <div class='overlay'>
-                                            <p>{{row.message|e('html')}}</p>
-                                        </div>
+                        <div class='col-md-6 col-lg-4'>
+                            <a href='article?id={{row.id}}'>
+                                <div class='first blog-div'>
+                                    <img src='Style/images/blog1.jpg' alt=''>
+                                    <h1>Pomysłowy</h1>
+                                    <p>Lorem Ipsum</p>
+                                    <div class='overlay'>
+                                        <p>
+                                            Jestem bardzo pomysłową osobą, wiele rzeczy projektuje i realizuje samemu. Lubię tworzyć rzeczy oryginalne i od podstaw.
+                                        </p>
                                     </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class='col-md-6 col-lg-4'>
+                            <a href='article?id={{row.id}}'>
+                                <div class='first blog-div'>
+                                    <img src='Style/images/blog1.jpg' alt=''>
+                                    <h1>Rygorystyczny</h1>
+                                    <p>Lorem Ipsum</p>
+                                    <div class='overlay'>
+                                        <p>
+                                            Ściśle trzymam się określonych reguł, standardów i dokumentacji. To samo tyczy się zleceń, zawsze są wykonane tak jak chcesz!
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class='col-md-6 col-lg-4'>
+                            <a href='article?id={{row.id}}'>
+                                <div class='first blog-div'>
+                                    <img src='Style/images/blog1.jpg' alt=''>
+                                    <h1>Pomysłowy</h1>
+                                    <p>Lorem Ipsum</p>
+                                    <div class='overlay'>
+                                        <p>
+                                            Jestem bardzo pomysłową osobą, wiele rzeczy projektuje i realizuje samemu. Lubię tworzyć rzeczy oryginalne i od podstaw.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- BLOG SECTION -->
+        <section class="blog" id="blog-sec">
+            <h1>Projekty które zrealizowałem</h1>
+            <div class="container">
+                <div class="row">
+                    {%for row in posts%}
+                    <div class='col-md-6 col-lg-4'>
+                        <a href='article?id={{row.id}}'>
+                            <div class='first blog-div'>
+                                <img src='Style/images/blog1.jpg' alt=''>
+                                <h1>{{row.title|e('html')}}</h1>
+                                <p>Lorem Ipsum</p>
+                                <div class='overlay'>
+                                    <p>{{row.message|e('html')}}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </section>
+        <!-- PROJECTS SECTION 
+        <section class="projects" id="projects-sec">
+            <h1>My projects</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 slide-in">
+                        <div class='first project-div'>
+                            <div class="description">
+                                <h1>Simple Portfolio CMS</h1>
+                                <a href="http://github.com/Haqz/Simple-Portoflio-CMS/">
+                                    <button><i class="fab fa-github"></i> Sprawdź teraz</button>
                                 </a>
                             </div>
-                        {%endfor%}
+                        </div>
                     </div>
-                </div>
-            </section>
-            <!-- PROJECTS SECTION -->
-            <section class="projects" id="projects-sec">
-                <h1>My projects</h1>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4 slide-in">
-                            <div class='first project-div'>
-                                <div class="description">
-                                    <h1>Simple Portfolio CMS</h1>
-                                    <a href="http://github.com/Haqz/Simple-Portoflio-CMS/">
-                                        <button><i class="fab fa-github"></i> Sprawdź teraz</button>
-                                    </a>
-                                </div>
+                    <div class="col-md-6 col-lg-4 slide-in projDisabled">
+                        <div class='first project-div'>
+                            <div class="description">
+                                <h1>Cos tu będzie</h1>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-4 slide-in projDisabled">
-                            <div class='first project-div'>
-                                <div class="description">
-                                    <h1>Cos tu będzie</h1>
-                                    <!---<a href="#">
-                                        <button>Check it!</button>
-                                    </a>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4 slide-in projDisabled">
-                            <div class='first project-div'>
-                                <div class="description">
-                                    <h1>Kiedyś...</h1>
-                                    <!---<a href="#">
-                                        <button>Check it!</button>
-                                    </a>-->
-                                </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 slide-in projDisabled">
+                        <div class='first project-div'>
+                            <div class="description">
+                                <h1>Kiedyś...</h1>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-      <!-- FOOTER -->
-      {%include '_footer.html'%}
-      <!-- BOOTSTRAP FILES -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <!-- MY SCRIPTS -->
-      <script src="menuscroll.js"></script>
-   </body>
+            </div>
+        </section>-->
+    </main>
+    <!-- FOOTER -->
+    {%include '_footer.html'%}
+    <!-- BOOTSTRAP FILES -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- MY SCRIPTS -->
+    <script src="menuscroll.js"></script>
+</body>
+
 </html>

@@ -1,74 +1,56 @@
 @import '_mixin.scss';
 @import '_variables.scss';
-
 .blog {
     background-color: rgb(19, 99, 190);
     margin: 0;
     padding: 80px 0;
     color: white;
-
     h1 {
         @include h1-properties;
     }
+}
 
-    .container {
-        .row {
-            div {
-                height: 40vh;
-                position: relative;
-                margin-bottom: 25px;
-
-                a {
-                    text-decoration: none;
-                    color: black;
-
-                    .blog-div {
-                        @include div-for-blog;
-
-
-                        h1 {
-                            @include h1-for-blog;
-                            z-index: 10;
-                        }
-
+.container {
+    .row {
+        div {
+            height: 40vh;
+            position: relative;
+            margin-bottom: 25px;
+            a {
+                text-decoration: none;
+                color: black;
+                .blog-div {
+                    @include div-for-blog;
+                    h1 {
+                        @include h1-for-blog;
+                        z-index: 10;
+                    }
+                    p {
+                        font-size: $p-blog-font-size;
+                    }
+                    img {
+                        -webkit-transition: $transition-for-blog;
+                        transition: $transition-for-blog;
+                    }
+                    &:hover img {
+                        -webkit-transform: scale(1.2);
+                        transform: scale(1.2);
+                    }
+                    .overlay {
+                        @include overlay-for-blog;
                         p {
-                            font-size: $p-blog-font-size;
+                            @include center-transform;
+                            @include p-for-blog;
                         }
-
-                        img {
-                            -webkit-transition: $transition-for-blog;
-                            transition: $transition-for-blog;
-                        }
-
-                        &:hover img {
-                            -webkit-transform: scale(1.2);
-                            transform: scale(1.2);
-                        }
-
-                        .overlay {
-                            @include overlay-for-blog;
-
-                            p {
-                                @include center-transform;
-                                @include p-for-blog;
-                            }
-
-                            p:nth-of-type(2) {
-                                @include p-for-blog;
-                                position: absolute;
-                                top: 80%;
-                            }
-
-
-                        }
-
-                        &:hover .overlay {
-                            height: 100%;
+                        p:nth-of-type(2) {
+                            @include p-for-blog;
+                            position: absolute;
+                            top: 80%;
                         }
                     }
-
-
-
+                    &:hover .overlay {
+                        height: 100%;
+                    }
                 }
             }
         }
@@ -99,7 +81,6 @@
     }
 }
 
-
 @media (max-width: 500px) {
     .blog {
         .container {
@@ -125,14 +106,12 @@
     }
 }
 
-
 @media (max-width: 900px) and (orientation: landscape) {
     .blog {
         .container {
             .row {
                 div {
                     height: 80vh;
-
                 }
             }
         }

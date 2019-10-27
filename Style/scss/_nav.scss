@@ -1,29 +1,22 @@
 @import '_mixin.scss';
 @import '_variables.scss';
-
 .navigation {
     background-color: transparent !important;
     position: fixed;
     width: 100%;
     -webkit-transition: .3s all;
     transition: .3s all;
-
     &.active {
         background-color: rgba(0, 0, 0, .8) !important;
-
         a {
             img {
                 width: 50px;
             }
         }
-
         div {
             ul {
-
-
                 li {
                     font-size: 20px;
-
                     a {
                         &::before {
                             border-color: white;
@@ -33,10 +26,7 @@
             }
         }
     }
-
     a {
-
-
         img {
             border-radius: 50%;
             width: 70px;
@@ -44,33 +34,25 @@
             -webkit-transition: .3s all;
             transition: .3s all;
         }
-
         span {
             color: white !important;
             -webkit-transition: .3s all;
             transition: .3s all;
         }
     }
-
     button {
         color: black !important;
     }
-
     div {
-
-
         ul {
             li {
                 margin: 0 30px;
                 font-size: 25px;
-
-
                 a {
                     color: white !important;
                     -webkit-transition: .3s all;
                     transition: .3s all;
                     position: relative;
-
                     &::before {
                         content: '';
                         position: absolute;
@@ -81,15 +63,12 @@
                         -webkit-transition: width .4s cubic-bezier(.68, -0.55, .27, 1.55);
                         transition: width .4s cubic-bezier(.68, -0.55, .27, 1.55);
                     }
-
                     &:hover::before {
                         width: 100%;
                     }
-
                     // &.active-a {
                     //     color: white !important;
                     // }
-
                 }
             }
         }
