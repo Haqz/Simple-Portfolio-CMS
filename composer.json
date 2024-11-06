@@ -7,6 +7,6 @@
     },
     "require": {
         "slim/slim-skeleton": "^3.1",
-        "twig/twig": "^2.8"
+        "twig/twig": "^3.11"
     }
 }
